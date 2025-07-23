@@ -2,137 +2,215 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Webpage</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Utsab Gautam | Portfolio</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
-      line-height: 1.6;
-      padding: 20px;
-    }
-
-    header {
-      background-color: #3498db;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      position: relative;
-    }
-
-    nav {
-      margin-top: 10px;
-    }
-
-    nav a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: white;
-      font-weight: bold;
-    }
-
-    marquee {
-      background: #e74c3c;
-      color: white;
-      padding: 8px;
-      font-weight: bold;
-    }
-
-    main {
-      padding: 20px;
-      background-color: white;
-      margin-top: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    section {
-      margin-bottom: 20px;
-    }
-
-    select {
-      padding: 8px;
-      font-size: 16px;
-      margin-top: 10px;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 20px;
-      font-size: 14px;
-      color: #777;
-    }
-  </style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fefefe;
+            color: #333;
+            line-height: 1.6;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #3498db;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+        
+        nav {
+            margin-top: 10px;
+        }
+        
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        
+        marquee {
+            background: #ff4d6d;
+            color: white;
+            padding: 8px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        
+        main {
+            padding: 20px;
+            background-color: white;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        section {
+            margin-bottom: 40px;
+        }
+        
+        select {
+            padding: 8px;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            background-color: #f4f4f4;
+            color: #555;
+        }
+        
+        .for-her {
+            font-size: 60px;
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            animation: pulse 2s infinite;
+            margin-top: 40px;
+        }
+        
+        .for-her:hover {
+            color: #c0392b;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        .left-center {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            height: 200px;
+            padding-left: 20px;
+        }
+        
+        #for-her-pages ul {
+            list-style: none;
+            padding-left: 0;
+            max-width: 400px;
+            margin-top: 15px;
+        }
+        
+        #for-her-pages ul li {
+            background: #ffe6f1;
+            border: 2px solid #e74c3c;
+            border-radius: 12px;
+            margin: 10px 0;
+            padding: 12px 20px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        
+        #for-her-pages ul li a {
+            text-decoration: none;
+            color: #c0392b;
+            display: inline-block;
+            width: 100%;
+        }
+        
+        #for-her-pages ul li:hover {
+            background: #e74c3c;
+        }
+        
+        #for-her-pages ul li:hover a {
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
 
-  <!-- 🔴 Marquee for Announcement -->
-  <marquee behavior="scroll" direction="left">Welcome to Utsab Gautam's Portfolio Website! 🚀</marquee>
+    <!-- 🔴 Marquee for Announcement -->
+    <marquee behavior="scroll" direction="left">Welcome to Utsab Gautam's Portfolio Website! 🚀</marquee>
 
-  <!-- 🔷 HEADER -->
-  <header>
-    <h1>Welcome to My Website</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+    <!-- 🔷 HEADER -->
+    <header>
+        <h1>Welcome to My Website</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#for-her-pages">For Her</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-  <!-- 🔶 MAIN CONTENT -->
-  <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>Hello! I'm Utsab Gautam, an Electronics Engineering student with a passion for web development, electronics, and social impact projects. I love building solutions that help people and communities.</p>
-    </section>
+    <!-- 🔶 MAIN CONTENT -->
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hello! I'm <strong>Utsab Gautam</strong>, an Electronics Engineering student with a passion for web development, electronics, and social impact projects. I love building solutions that help people and communities.</p>
+        </section>
 
-    <section id="projects">
-      <h2>My Projects</h2>
-      <ul>
-        <li><a href="lifeblood-donors.html" target="_blank">LifeBlood – Blood Donation Management System</a></li>
-        <li>Room Finder for Kathmandu Valley (in progress)</li>
-      </ul>
+        <section id="projects">
+            <h2>My Projects</h2>
 
-      <!-- 🔽 Project Selector -->
-      <label for="project-select">Select a Project:</label>
-      <select id="project-select">
-        <option disabled selected>Select...</option>
-        <option value="lifeblood">LifeBlood – Blood Donation</option>
-        <option value="roomfinder">Room Finder</option>
-      </select>
+            <!-- 🔽 Project Selector -->
+            <label for="project-select">Select a Project:</label>
+            <select id="project-select">
+                <option disabled selected>Select...</option>
+                <option value="lifeblood">LifeBlood – Blood Donation Management System</option>
+            </select>
 
-      <script>
-        document.getElementById("project-select").addEventListener("change", function () {
-          const value = this.value;
-          if (value === "lifeblood") {
-            window.open("lifeblood-donors.html", "_blank");
-          } else if (value === "roomfinder") {
-            alert("Room Finder project is still in progress.");
-          }
-        });
-      </script>
-    </section>
+            <script>
+                document.getElementById("project-select").addEventListener("change", function() {
+                    const value = this.value;
+                    if (value === "lifeblood") {
+                        window.open("lifeblood-donors.html", "_blank");
+                    }
+                });
+            </script>
+        </section>
 
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <p>Email: gautamutsab2005@gmail.com</p>
-    </section>
-  </main>
+        <!-- ❤️ For Her Big Icon -->
+        <section id="for-her-pages">
+            <h2>Special Pages for Her</h2>
 
-  <!-- ⚫ FOOTER -->
-  <footer>
-    &copy; 2025 Utsab Gautam. All rights reserved.
-  </footer>
+            <div class="left-center">
+                <a href="for%20her/memories.html" target="_blank" class="for-her">❤️ For Her</a>
+            </div>
+
+            <ul>
+                <li><a href="for%20her/apology.html" target="_blank">💌 Apology Page 1</a></li>
+                <li><a href="for%20her/apologyii.html" target="_blank">💖 Apology Page 2</a></li>
+                <li><a href="for%20her/memories.html" target="_blank">📸 Memories</a></li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Email: <a href="mailto:gautamutsab2005@gmail.com">gautamutsab2005@gmail.com</a></p>
+        </section>
+    </main>
+
+    <!-- ⚫ FOOTER -->
+    <footer>
+        &copy; 2025 Utsab Gautam. All rights reserved.
+    </footer>
 
 </body>
 
