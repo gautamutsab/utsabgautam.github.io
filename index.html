@@ -99,8 +99,7 @@
     <section id="projects">
       <h2>My Projects</h2>
       <ul>
-        <li>LifeBlood – Blood Donation Management System</li>
-        <li>Wi-Fi + Payment Dual QR Concept</li>
+        <li><a href="lifeblood-donors.html" target="_blank">LifeBlood – Blood Donation Management System</a></li>
         <li>Room Finder for Kathmandu Valley (in progress)</li>
       </ul>
 
@@ -108,20 +107,25 @@
       <label for="project-select">Select a Project:</label>
       <select id="project-select">
         <option disabled selected>Select...</option>
-        <option>LifeBlood</option>
-        <option>Wi-Fi + Payment QR</option>
-        <option>Room Finder</option>
+        <option value="lifeblood">LifeBlood – Blood Donation</option>
+        <option value="roomfinder">Room Finder</option>
       </select>
 
-      <!-- 🔗 Link to LifeBlood Donor Project -->
-      <p style="margin-top: 20px;">
-        <a href="lifeblood-donors.html" target="_blank">🔗 View Blood Donor List Project</a>
-      </p>
+      <script>
+        document.getElementById("project-select").addEventListener("change", function () {
+          const value = this.value;
+          if (value === "lifeblood") {
+            window.open("lifeblood-donors.html", "_blank");
+          } else if (value === "roomfinder") {
+            alert("Room Finder project is still in progress.");
+          }
+        });
+      </script>
     </section>
 
     <section id="contact">
       <h2>Contact Me</h2>
-      <p>Email: utsabgautam@example.com</p>
+      <p>Email: gautamutsab2005@gmail.com</p>
     </section>
   </main>
 
