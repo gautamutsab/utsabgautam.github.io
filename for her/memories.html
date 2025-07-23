@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Sweetest Memories 💖</title>
+    <style>
+        /* Reset */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(to right, #ffe4ec, #ffffff);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #d6336c;
+            overflow-x: hidden;
+        }
+        
+        header {
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px 8px #ffb6c1;
+        }
+        
+        .emoji-float {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 0;
+        }
+        
+        .emoji {
+            position: absolute;
+            font-size: 2.5rem;
+            animation: floatEmoji 10s linear infinite;
+            opacity: 0.7;
+        }
+        
+        @keyframes floatEmoji {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+            }
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .gallery img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 8px 16px rgba(255, 105, 180, 0.3);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        
+        .quotes-section {
+            padding: 2rem;
+            background: #fff0f6;
+            border-top: 2px solid #ffb6c1;
+        }
+        
+        .quote-box {
+            background: #ffe6f0;
+            margin: 1rem auto;
+            padding: 1rem 2rem;
+            border-radius: 15px;
+            max-width: 800px;
+            font-size: 1.2rem;
+            font-style: italic;
+            box-shadow: 0 4px 10px rgba(255, 182, 193, 0.3);
+            animation: fadeIn 1s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .heart {
+            width: 100px;
+            height: 90px;
+            position: relative;
+            margin: 3rem auto;
+            animation: pulse 2s infinite;
+        }
+        
+        .heart::before,
+        .heart::after {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 90px;
+            background: red;
+            border-radius: 50px 50px 0 0;
+        }
+        
+        .heart::before {
+            left: 50px;
+        }
+        
+        .heart::after {
+            left: 0;
+            transform: rotate(-90deg);
+            transform-origin: bottom left;
+        }
+        
+        @keyframes pulse {
+            0%,
+            100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+        
+        .forgive-button {
+            display: block;
+            margin: 2rem auto;
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            color: white;
+            background: #ff69b4;
+            border: none;
+            border-radius: 25px;
+            box-shadow: 0 4px 10px rgba(255, 105, 180, 0.4);
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        .forgive-button:hover {
+            background: #ff1493;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="emoji-float">
+        <div class="emoji" style="left:10%; animation-delay: 0s;">💗</div>
+        <div class="emoji" style="left:30%; animation-delay: 2s;">💞</div>
+        <div class="emoji" style="left:50%; animation-delay: 4s;">💕</div>
+        <div class="emoji" style="left:70%; animation-delay: 6s;">❤️</div>
+        <div class="emoji" style="left:90%; animation-delay: 8s;">🥰</div>
+    </div>
+
+    <header>
+        <h1>Our Sweetest Memories 💖</h1>
+    </header>
+
+    <div class="heart"></div>
+
+    <section class="gallery">
+        <img src="IMG-20240411-WA0009.jpg" alt="Memory 1">
+        <img src="IMG-20240411-WA0010.jpg" alt="Memory 2">
+        <img src="IMG-20240607-WA0013.jpg" alt="Memory 3">
+        <img src="IMG-20240607-WA0015.jpg" alt="Memory 4">
+        <img src="IMG-20240607-WA0019.jpg" alt="Memory 5">
+        <img src="IMG-20240609-WA0020.jpg" alt="Memory 6">
+        <img src="IMG-20240609-WA0030.jpg" alt="Memory 7">
+    </section>
+
+    <section class="quotes-section">
+        <div class="quote-box">"Every time I look at you, I fall in love all over again 💘"</div>
+        <div class="quote-box">"You are my sunshine on the darkest days ☀️"</div>
+        <div class="quote-box">"I would choose you again and again in every lifetime 🥰"</div>
+        <div class="quote-box">"You complete me 💑 and make my world brighter ✨"</div>
+        <div class="quote-box">"You're not my number one. You're my only one 💍"</div>
+    </section>
+
+    <button class="forgive-button" onclick="alert('Thank you for forgiving me ❤️')">Press here if you Forgiven me 💌</button>
+
+</body>
+
+</html>
