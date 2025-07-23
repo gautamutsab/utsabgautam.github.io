@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Register - LifeBlood (दर्ता गर्नुहोस्)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #fff5f5;
+            color: #333;
+        }
+        
+        header {
+            background-color: #d90429;
+            color: white;
+            text-align: center;
+            padding: 30px 10px;
+        }
+        
+        nav {
+            background-color: #ef233c;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        
+        .container {
+            max-width: 500px;
+            background-color: white;
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            text-align: center;
+            color: #d90429;
+            margin-bottom: 25px;
+        }
+        
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        
+        button {
+            background-color: #d90429;
+            color: white;
+            font-size: 16px;
+            padding: 12px;
+            margin-top: 25px;
+            width: 100%;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        button:hover {
+            background-color: #a6001a;
+        }
+        
+        footer {
+            background-color: #ef233c;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🩸 LifeBlood</h1>
+        <p>Become a Donor Today (आजै रक्तदाता बन्नुहोस्)</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home (गृहपृष्ठ)</a>
+        <a href="register.html">Register (दर्ता)</a>
+        <a href="request.html">Request Blood (रक्तको अनुरोध)</a>
+        <a href="login.html">Login (लगइन)</a>
+    </nav>
+
+    <div class="container">
+        <h2>Donor Registration Form (रक्तदाता दर्ता फारम)</h2>
+        <form id="registerForm">
+            <label for="name">Full Name (पुरा नाम)</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address (इमेल ठेगाना)</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number (फोन नम्बर)</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="blood">Blood Group (रक्त समूह)</label>
+            <select id="blood" name="blood" required>
+                <option value="">-- Select (छान्नुहोस्) --</option>
+                <option>A+</option>
+                <option>A-</option>
+                <option>B+</option>
+                <option>B-</option>
+                <option>O+</option>
+                <option>O-</option>
+                <option>AB+</option>
+                <option>AB-</option>
+            </select>
+
+            <label for="location">Location (स्थान)</label>
+            <input type="text" id="location" name="location" required>
+
+            <label for="lastDonation">Last Donation Date (अन्तिम रक्तदान मिति)</label>
+            <input type="date" id="lastDonation" name="lastDonation">
+
+            <button type="submit">Register (दर्ता गर्नुहोस्)</button>
+        </form>
+    </div>
+
+    <footer>
+        &copy; 2025 LifeBlood | Contact: lifeblood@example.com | Phone: +977-9812345678
+    </footer>
+
+    <script>
+        document.getElementById("registerForm").addEventListener("submit", async function(e) {
+            e.preventDefault();
+
+            const formData = {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                phone: document.getElementById("phone").value,
+                blood: document.getElementById("blood").value,
+                location: document.getElementById("location").value,
+                lastDonation: document.getElementById("lastDonation").value
+            };
+
+            try {
+                const response = await fetch("http://localhost:3000/register", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const result = await response.json();
+                alert(result.message || "Registration successful!");
+            } catch (error) {
+                alert("Something went wrong. Please try again.");
+                console.error(error);
+            }
+        });
+    </script>
+
+</body>
+
+</html>

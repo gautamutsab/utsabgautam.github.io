@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Registered Donors - LifeBlood</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #fff5f5;
+            color: #333;
+        }
+        
+        h1 {
+            color: #d90429;
+            text-align: center;
+        }
+        
+        table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        th,
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+        }
+        
+        th {
+            background-color: #d90429;
+            color: white;
+        }
+        
+        tr:hover {
+            background-color: #f5c6c6;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Registered Blood Donors (दर्ता भएका रक्तदाताहरू)</h1>
+    <table id="donorsTable">
+        <thead>
+            <tr>
+                <th>Name (नाम)</th>
+                <th>Email (इमेल)</th>
+                <th>Phone (फोन)</th>
+                <th>Blood Group (रक्त समूह)</th>
+                <th>Location (स्थान)</th>
+                <th>Last Donation (अन्तिम रक्तदान)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Donors will be added here dynamically -->
+        </tbody>
+    </table>
+
+    <script>
+        async function loadDonors() {
+            try {
+                const response = await fetch('http://localhost:3000/donors');
+                if (!response.ok) {
+                    throw new Error('Failed to fetch donors');
+                }
+                const donors = await response.json();
+
+                const tbody = document.querySelector('#donorsTable tbody');
+                tbody.innerHTML = ''; // Clear existing
+
+                if (donors.length === 0) {
+                    tbody.innerHTML = '<tr><td colspan="6">No donors registered yet.</td></tr>';
+                    return;
+                }
+
+                donors.forEach(donor => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td>${donor.name || ''}</td>
+                        <td>${donor.email || ''}</td>
+                        <td>${donor.phone || ''}</td>
+                        <td>${donor.blood || ''}</td>
+                        <td>${donor.location || ''}</td>
+                        <td>${donor.lastDonation || 'N/A'}</td>
+                    `;
+                    tbody.appendChild(tr);
+                });
+            } catch (error) {
+                console.error('Error loading donors:', error);
+                const tbody = document.querySelector('#donorsTable tbody');
+                tbody.innerHTML = '<tr><td colspan="6">Failed to load donors.</td></tr>';
+            }
+        }
+
+        // Load donors when page loads
+        window.onload = loadDonors;
+    </script>
+</body>
+
+</html>

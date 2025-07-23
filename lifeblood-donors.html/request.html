@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Request Blood - LifeBlood (रक्तको अनुरोध)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #fff5f5;
+            color: #333;
+        }
+        
+        header {
+            background-color: #d90429;
+            color: white;
+            text-align: center;
+            padding: 30px 10px;
+        }
+        
+        nav {
+            background-color: #ef233c;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        
+        .container {
+            max-width: 500px;
+            background-color: white;
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            text-align: center;
+            color: #d90429;
+            margin-bottom: 25px;
+        }
+        
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        
+        button {
+            background-color: #d90429;
+            color: white;
+            font-size: 16px;
+            padding: 12px;
+            margin-top: 25px;
+            width: 100%;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        button:hover {
+            background-color: #a6001a;
+        }
+        
+        footer {
+            background-color: #ef233c;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🩸 LifeBlood</h1>
+        <p>Request Blood (रक्तको अनुरोध गर्नुहोस्)</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home (गृहपृष्ठ)</a>
+        <a href="register.html">Register (दर्ता)</a>
+        <a href="request.html">Request Blood (रक्तको अनुरोध)</a>
+        <a href="login.html">Login (लगइन)</a>
+        <a href="donors.html">View Donors (रक्तदाता हेर्नुहोस्)</a>
+    </nav>
+
+    <div class="container">
+        <h2>Blood Request Form (रक्तको अनुरोध फारम)</h2>
+        <form id="requestForm">
+            <label for="name">Full Name (पूरा नाम)</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Email Address (इमेल ठेगाना)</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="phone">Phone Number (फोन नम्बर)</label>
+            <input type="tel" id="phone" name="phone" required />
+
+            <label for="blood">Blood Group Needed (रक्त समूह)</label>
+            <select id="blood" name="blood" required>
+                <option value="">-- Select (छान्नुहोस्) --</option>
+                <option>A+</option>
+                <option>A-</option>
+                <option>B+</option>
+                <option>B-</option>
+                <option>O+</option>
+                <option>O-</option>
+                <option>AB+</option>
+                <option>AB-</option>
+            </select>
+
+            <label for="location">Location (स्थान)</label>
+            <input type="text" id="location" name="location" required />
+
+            <label for="message">Additional Details (थप जानकारी)</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <button type="submit">Request Blood (अनुरोध गर्नुहोस्)</button>
+        </form>
+    </div>
+
+    <footer>
+        &copy; 2025 LifeBlood | Contact: lifeblood@example.com | Phone: +977-9812345678
+    </footer>
+
+    <script>
+        document.getElementById('requestForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const requestData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                blood: document.getElementById('blood').value,
+                location: document.getElementById('location').value,
+                message: document.getElementById('message').value
+            };
+
+            try {
+                const response = await fetch('http://localhost:3000/request-blood', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(requestData)
+                });
+
+                const result = await response.json();
+                alert(result.message || 'Blood request sent!');
+                this.reset();
+            } catch (error) {
+                alert('Something went wrong. Please try again.');
+                console.error(error);
+            }
+        });
+    </script>
+</body>
+
+</html>

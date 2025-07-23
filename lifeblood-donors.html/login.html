@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Login - LifeBlood (लगइन)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff5f5;
+            margin: 0;
+            color: #333;
+        }
+        
+        header {
+            background-color: #d90429;
+            color: white;
+            text-align: center;
+            padding: 30px 10px;
+        }
+        
+        nav {
+            background-color: #ef233c;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        
+        .container {
+            max-width: 400px;
+            background-color: white;
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            text-align: center;
+            color: #d90429;
+            margin-bottom: 25px;
+        }
+        
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        
+        button {
+            background-color: #d90429;
+            color: white;
+            font-size: 16px;
+            padding: 12px;
+            margin-top: 25px;
+            width: 100%;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        button:hover {
+            background-color: #a6001a;
+        }
+        
+        footer {
+            background-color: #ef233c;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🩸 LifeBlood</h1>
+        <p>Login to your account (आफ्नो खातामा लगइन गर्नुहोस्)</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home (गृहपृष्ठ)</a>
+        <a href="register.html">Register (दर्ता)</a>
+        <a href="request.html">Request Blood (रक्तको अनुरोध)</a>
+        <a href="login.html">Login (लगइन)</a>
+    </nav>
+
+    <div class="container">
+        <h2>Login Form (लगइन फारम)</h2>
+        <form id="loginForm">
+            <label for="email">Email Address (इमेल ठेगाना)</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="password">Password (पासवर्ड)</label>
+            <input type="password" id="password" name="password" required />
+
+            <button type="submit">Login (लगइन गर्नुहोस्)</button>
+        </form>
+    </div>
+
+    <footer>
+        &copy; 2025 LifeBlood | Contact: lifeblood@example.com | Phone: +977-9812345678
+    </footer>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent actual form submission
+            // For now, just show alert (you can replace with real auth later)
+            alert('Login button clicked! (लगइन बटन थिचियो!)');
+        });
+    </script>
+</body>
+
+</html>
