@@ -1,58 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Me - Utsab Gautam</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #fefefe;
-      text-align: center;
-      padding: 50px;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Utsab Gautam | Portfolio</title>
 
-    h2 {
-      font-size: 2.5rem;
-      color: #444;
-    }
-
-    .social-icons {
-      margin-top: 30px;
-    }
-
-    .social-icons a {
-      text-decoration: none;
-      margin: 0 15px;
-      display: inline-block;
-      transition: transform 0.3s ease;
-    }
-
-    .social-icons a:hover {
-      transform: scale(1.2);
-    }
-
-    .social-icons img {
-      width: 48px;
-      height: 48px;
-    }
-  </style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #fdfbfb, #ebedee);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: #3498db;
+            color: white;
+            padding: 20px 10px;
+            text-align: center;
+        }
+        
+        nav {
+            margin-top: 10px;
+        }
+        
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        
+        nav a:hover {
+            color: #ffeaa7;
+        }
+        
+        marquee {
+            background: #ff4d6d;
+            color: white;
+            padding: 10px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        
+        main {
+            padding: 20px;
+            margin: 20px;
+            border-radius: 12px;
+            background-color: #ffffffd2;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        section {
+            margin-bottom: 40px;
+        }
+        
+        .profile-card {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            animation: fadeIn 2s ease-in-out;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .profile-card img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #3498db;
+            box-shadow: 0 0 15px rgba(52, 152, 219, 0.5);
+        }
+        
+        .profile-card .bio {
+            max-width: 500px;
+        }
+        
+        .profile-card h2 {
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        select {
+            padding: 8px;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        
+        .social-icons {
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .social-icons a {
+            text-decoration: none;
+            margin: 0 10px;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            transform: scale(1.2);
+        }
+        
+        .social-icons img {
+            width: 40px;
+            height: 40px;
+        }
+        
+        .about-me-link {
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .about-me-link a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: background 0.3s ease;
+        }
+        
+        .about-me-link a:hover {
+            background-color: #2980b9;
+        }
+        
+        .about-me-link img {
+            width: 20px;
+            height: 20px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            background-color: #f4f4f4;
+            color: #555;
+        }
+        
+        @media (max-width: 600px) {
+            .profile-card {
+                flex-direction: column;
+                text-align: center;
+            }
+            .profile-card img {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-  <h2>Contact Me</h2>
-  <div class="social-icons">
-    <a href="https://www.facebook.com/utsab.gautam.798" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" />
-    </a>
-    <a href="https://www.linkedin.com/in/utsab-gautam-aa7264309?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" />
-    </a>
-    <a href="https://github.com/gautamutsab" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub" />
-    </a>
-    <a href="https://www.instagram.com/utsabgautam28/" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram" />
-    </a>
-  </div>
+
+    <marquee behavior="scroll" direction="left">Welcome to Utsab Gautam's official Website! 🚀</marquee>
+
+    <header>
+        <h1>Welcome to My Website</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="profile-card" id="about">
+            <img src="IMG_20250712_175458.jpg" alt="Utsab Gautam" />
+            <div class="bio">
+                <h2>Utsab Gautam</h2>
+                <p>
+                    Hello! I'm <strong>Utsab Gautam</strong>, an Electronics Engineering student with a passion for technology, web development, and electronics. I love creating real-world solutions that have social impact.
+                </p>
+                <p>
+                    I believe in turning ideas into actions, and actions into innovation. Let’s build something amazing together!
+                </p>
+            </div>
+        </section>
+
+        <div class="about-me-link">
+            <a href="aboutme.html" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828490.png" alt="About Icon" /> More About Me
+            </a>
+        </div>
+
+        <section id="projects">
+            <h2>My Projects</h2>
+            <label for="project-select">Select a Project:</label>
+            <select id="project-select">
+                <option disabled selected>Select...</option>
+                <option value="lifeblood">LifeBlood – Blood Donation Management System</option>
+            </select>
+            <script>
+                document.getElementById("project-select").addEventListener("change", function() {
+                    if (this.value === "lifeblood") {
+                        window.open("lifeblood-donors.html", "_blank");
+                    }
+                });
+            </script>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Email: <a href="mailto:gautamutsab2005@gmail.com">gautamutsab2005@gmail.com</a></p>
+            <p>Phone: 9746930981</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/utsab.gautam.798" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" />
+                </a>
+                <a href="https://www.linkedin.com/in/utsab-gautam-aa7264309?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" />
+                </a>
+                <a href="https://github.com/gautamutsab" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub" />
+                </a>
+                <a href="https://www.instagram.com/utsabgautam28/" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram" />
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        &copy; 2025 Utsab Gautam. All rights reserved.
+    </footer>
+
 </body>
+
 </html>
