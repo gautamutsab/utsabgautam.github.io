@@ -8,8 +8,6 @@
 
     <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <!-- Typed.js -->
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
     <style>
         * {
@@ -33,18 +31,28 @@
             position: relative;
         }
         
-        header h1 {
-            font-size: 36px;
-            margin-bottom: 10px;
-        }
-        
-        header p span {
-            color: #ffdd57;
-        }
-        
-        .typed-text {
+        .marquee {
+            background-color: #0066cc;
+            color: white;
+            padding: 10px;
             font-weight: bold;
-            font-size: 18px;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        
+        .marquee span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 15s linear infinite;
+        }
+        
+        @keyframes marquee {
+            0% {
+                transform: translateX(0%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
         }
         
         .container {
@@ -119,6 +127,18 @@
             transform: scale(1.05);
         }
         
+        .translate-btn {
+            display: block;
+            margin: 20px auto;
+            padding: 12px 20px;
+            background-color: #0077b6;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        
         footer {
             text-align: center;
             padding: 20px;
@@ -132,10 +152,13 @@
 <body>
     <header data-aos="zoom-in">
         <h1>About Me - Utsab Gautam</h1>
-        <p>
-            <span class="typed-text"></span>
-        </p>
     </header>
+
+    <div class="marquee">
+        <span>Namaste! I’m Utsab Gautam | Cricket Lover | Tech Innovator | From Rukumkot ❤️</span>
+    </div>
+
+    <button class="translate-btn" onclick="translatePage()">Translate to Nepali (नेपाली अनुवाद)</button>
 
     <div class="container" data-aos="fade-up">
         <div class="profile">
@@ -144,10 +167,14 @@
                 <p>
                     Hello! I'm <strong>Utsab Gautam</strong>, a passionate student and aspiring electronics engineer from the beautiful village of <strong>Rukumkot</strong> in the Rukum East district of Nepal. Rukumkot is a serene and historic place surrounded
                     by green hills, ancient temples, peaceful rivers, and natural wonders. It is often called the "Eastern Rukum Valley of Culture and Nature" because of its harmony between spiritual heritage and untouched Himalayan landscapes. With the
-                    iconic <strong>Shibalaya Temple</strong>, tranquil lakes, and lush pine forests, Rukumkot is more than just my hometown—it's the foundation of my dreams and values.
+                    iconic <strong>Shibalaya Temple</strong>, Kamal taal , and lush pine forests, Rukumkot is more than just my hometown—it's the foundation of my dreams and values.
                 </p>
+
+                <!-- Added r9.jpg image here -->
+                <img src="r9.jpg" alt="Rukumkot Beauty" />
+
                 <p>
-                    Growing up in a place like Rukumkot made me deeply curious about how the world works. As a child, I was always drawn to machines, wires, and devices. Whether it was fixing remote controls, setting up speakers, or playing with old radios, I found joy in
+                     As a child, I was always drawn to machines, wires, and devices. Whether it was fixing remote controls, setting up speakers, or playing with old radios, I found joy in
                     exploring the world of electronics. This natural curiosity turned into passion and later inspired me to pursue my education in <strong>Electronics, Communication, and Information Engineering</strong> at <strong>Sagarmatha Engineering College</strong>.
                     I believe that even a student from a small village can do big things in life with dedication and innovation.
                 </p>
@@ -173,7 +200,6 @@
                     If you're someone who loves cricket, tech, rural development, or just a good story—let's connect and build something meaningful together. My journey is only beginning, and I’m excited to grow, learn, and create. Thank you for being part of it.
                 </p>
             </div>
-
         </div>
 
         <div class="gallery">
@@ -196,15 +222,11 @@
         AOS.init();
     </script>
 
-    <!-- Typed.js init -->
+    <!-- Translation -->
     <script>
-        var typed = new Typed(".typed-text", {
-            strings: ["Electronics Engineering Student ", "Interest in web development ", "Cricket Lover", "Tech Innovator", "Researcher", "From Rukumkot ❤️"],
-            typeSpeed: 50,
-            backSpeed: 30,
-            backDelay: 1500,
-            loop: true
-        });
+        function translatePage() {
+            alert("नेपाली अनुवाद कार्यस्थलमा विकास भइरहेको छ। कृपया केही समयपछि प्रयास गर्नुहोस्। (Nepali translation feature coming soon!)");
+        }
     </script>
 </body>
 
