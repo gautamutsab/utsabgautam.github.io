@@ -7,6 +7,7 @@
     <title>Utsab Gautam | Portfolio</title>
 
     <style>
+        /* Existing styles ... */
         * {
             margin: 0;
             padding: 0;
@@ -74,6 +75,7 @@
             animation: fadeIn 2s ease-in-out;
             flex-wrap: wrap;
             justify-content: center;
+            position: relative;
         }
         
         .profile-card img {
@@ -168,6 +170,7 @@
             color: #555;
         }
         
+        /* Responsive */
         @media (max-width: 600px) {
             .profile-card {
                 flex-direction: column;
@@ -176,6 +179,37 @@
             .profile-card img {
                 margin-bottom: 20px;
             }
+        }
+
+        /* CV Button style - darker blue */
+        .download-cv-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #0a3d66, #053254);
+            color: #e0f7ff;
+            padding: 12px 25px;
+            font-weight: 700;
+            font-family: 'Courier New', Courier, monospace;
+            border: 2px solid #053254;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow:
+                0 0 12px #053254,
+                0 0 24px #0a3d66,
+                0 0 48px #053254;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            user-select: none;
+            margin: 40px auto 20px;
+        }
+        .download-cv-btn:hover {
+            background: linear-gradient(135deg, #053254, #0a3d66);
+            box-shadow:
+                0 0 20px #053254,
+                0 0 40px #0a3d66,
+                0 0 80px #053254;
+            transform: scale(1.05);
         }
     </style>
 </head>
@@ -249,6 +283,13 @@
                 </a>
             </div>
         </section>
+
+        <!-- Download CV Button placed at bottom -->
+        <div style="text-align: center;">
+            <a href="Utsab_Gautam_CV.pdf" download class="download-cv-btn" aria-label="Download Utsab Gautam's CV">
+                &#128187; Download CV
+            </a>
+        </div>
 
     </main>
 
