@@ -8,6 +8,7 @@
 
     <style>
         /* Existing styles ... */
+        
         * {
             margin: 0;
             padding: 0;
@@ -169,8 +170,8 @@
             background-color: #f4f4f4;
             color: #555;
         }
-        
         /* Responsive */
+        
         @media (max-width: 600px) {
             .profile-card {
                 flex-direction: column;
@@ -180,35 +181,30 @@
                 margin-bottom: 20px;
             }
         }
-
-        /* CV Button style - darker blue */
+        /* Bright/light Download CV Button style */
+        
         .download-cv-btn {
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            background: linear-gradient(135deg, #0a3d66, #053254);
-            color: #e0f7ff;
+            background: linear-gradient(135deg, #5bc0de, #87cefa);
+            color: #fff;
             padding: 12px 25px;
             font-weight: 700;
             font-family: 'Courier New', Courier, monospace;
-            border: 2px solid #053254;
+            border: 2px solid #87cefa;
             border-radius: 30px;
             cursor: pointer;
-            box-shadow:
-                0 0 12px #053254,
-                0 0 24px #0a3d66,
-                0 0 48px #053254;
+            box-shadow: 0 0 8px #5bc0de, 0 0 16px #87cefa;
             transition: all 0.3s ease;
             text-decoration: none;
             user-select: none;
             margin: 40px auto 20px;
         }
+        
         .download-cv-btn:hover {
-            background: linear-gradient(135deg, #053254, #0a3d66);
-            box-shadow:
-                0 0 20px #053254,
-                0 0 40px #0a3d66,
-                0 0 80px #053254;
+            background: linear-gradient(135deg, #87cefa, #5bc0de);
+            box-shadow: 0 0 12px #5bc0de, 0 0 24px #87cefa;
             transform: scale(1.05);
         }
     </style>
@@ -284,9 +280,9 @@
             </div>
         </section>
 
-        <!-- Download CV Button placed at bottom -->
+        <!-- Bright/light Download CV Button at bottom -->
         <div style="text-align: center;">
-            <a href="Utsab_Gautam_CV.pdf" download class="download-cv-btn" aria-label="Download Utsab Gautam's CV">
+            <a href="Utsab. Gautam CV(official).pdf" download class="download-cv-btn" aria-label="Download Utsab Gautam's CV">
                 &#128187; Download CV
             </a>
         </div>
