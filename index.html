@@ -5,9 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Utsab Gautam | Portfolio</title>
-
     <style>
-        /* Existing styles ... */
+        /* Reset and base */
         
         * {
             margin: 0;
@@ -15,34 +14,42 @@
             box-sizing: border-box;
         }
         
+        html,
         body {
+            height: 100%;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #fdfbfb, #ebedee);
-            color: #333;
-            line-height: 1.6;
+            color: #eee;
+            background: url('circuit for bg.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+            overflow-x: hidden;
+        }
+        /* Dark overlay on background for better contrast */
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(10, 15, 30, 0.85);
+            z-index: -1;
+        }
+        /* Scrollbar style */
+        
+         ::-webkit-scrollbar {
+            width: 12px;
         }
         
-        header {
-            background-color: #3498db;
-            color: white;
-            padding: 20px 10px;
-            text-align: center;
+         ::-webkit-scrollbar-track {
+            background: #111d2a;
         }
         
-        nav {
-            margin-top: 10px;
-        }
-        
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-        
-        nav a:hover {
-            color: #ffeaa7;
+         ::-webkit-scrollbar-thumb {
+            background: #3498db;
+            border-radius: 10px;
+            border: 3px solid #111d2a;
         }
         
         marquee {
@@ -51,182 +58,456 @@
             padding: 10px;
             font-weight: bold;
             font-size: 16px;
+            font-family: 'Courier New', Courier, monospace;
+            user-select: none;
+        }
+        /* Header */
+        
+        header {
+            background-color: rgba(30, 40, 60, 0.85);
+            color: #cee4ff;
+            padding: 25px 10px;
+            text-align: center;
+            box-shadow: 0 0 15px #3498db;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            user-select: none;
+        }
+        
+        header h1 {
+            font-weight: 900;
+            letter-spacing: 1.5px;
+            font-size: 2.5rem;
+            text-shadow: 0 0 6px #5bc0de;
+            margin-bottom: 10px;
+        }
+        
+        nav {
+            margin-top: 10px;
+        }
+        
+        nav a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: #88baff;
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 8px 12px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            user-select: none;
+            box-shadow: 0 0 6px transparent;
+        }
+        
+        nav a:hover,
+        nav a:focus {
+            background-color: #5bc0de;
+            color: #0e1117;
+            box-shadow: 0 0 15px #5bc0de;
+            outline: none;
         }
         
         main {
-            padding: 20px;
-            margin: 20px;
-            border-radius: 12px;
-            background-color: #ffffffd2;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            margin: 30px auto 60px;
+            padding: 20px 30px;
+            background: rgba(20, 28, 42, 0.85);
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(27, 43, 69, 0.9);
+            user-select: none;
         }
         
         section {
-            margin-bottom: 40px;
+            margin-bottom: 60px;
         }
+        /* Profile Card */
         
         .profile-card {
             display: flex;
             align-items: center;
-            gap: 20px;
-            background-color: #f0f0f0;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            animation: fadeIn 2s ease-in-out;
+            gap: 25px;
+            background-color: rgba(40, 55, 80, 0.95);
+            padding: 30px 40px;
+            border-radius: 25px;
+            box-shadow: 0 0 20px #3498dbaa;
             flex-wrap: wrap;
             justify-content: center;
             position: relative;
+            animation: fadeInUp 1.8s ease forwards;
         }
         
         .profile-card img {
-            width: 160px;
-            height: 160px;
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
             object-fit: cover;
-            border: 5px solid #3498db;
-            box-shadow: 0 0 15px rgba(52, 152, 219, 0.5);
+            border: 5px solid #5bc0de;
+            box-shadow: 0 0 25px #5bc0deaa;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .profile-card img:hover {
+            transform: scale(1.1) rotate(3deg);
+            box-shadow: 0 0 40px #87cefa;
         }
         
         .profile-card .bio {
-            max-width: 500px;
+            max-width: 600px;
+            color: #b8d1ff;
+            font-size: 1.1rem;
+            line-height: 1.5;
         }
         
         .profile-card h2 {
-            margin-bottom: 10px;
-            color: #2c3e50;
+            margin-bottom: 15px;
+            color: #a5d8ff;
+            font-size: 2rem;
+            text-shadow: 0 0 8px #5bc0de;
         }
+        /* Fade in animation */
         
-        @keyframes fadeIn {
-            from {
+        @keyframes fadeInUp {
+            0% {
                 opacity: 0;
                 transform: translateY(30px);
             }
-            to {
+            100% {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
+        /* Skills Section */
         
-        select {
-            padding: 8px;
-            font-size: 16px;
-            margin-top: 10px;
+        #skills {
+            background: rgba(30, 42, 60, 0.9);
+            padding: 30px 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 25px #5bc0de88;
         }
         
-        .social-icons {
-            margin-top: 20px;
+        #skills h2 {
+            color: #87cefa;
+            font-size: 2.2rem;
+            margin-bottom: 25px;
             text-align: center;
+            text-shadow: 0 0 12px #3498db;
+            user-select: none;
+        }
+        
+        .skill {
+            margin-bottom: 20px;
+            user-select: none;
+        }
+        
+        .skill-name {
+            font-weight: 700;
+            font-size: 1.15rem;
+            margin-bottom: 8px;
+            color: #c4dbff;
+            user-select: none;
+        }
+        
+        .skill-bar {
+            position: relative;
+            height: 28px;
+            background: #24415c;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: inset 0 0 8px #1b2a3e;
+            user-select: none;
+        }
+        
+        .skill-bar-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #5bc0de, #87cefa);
+            border-radius: 15px 0 0 15px;
+            box-shadow: 0 0 10px #87cefa;
+            transition: width 1.5s ease-in-out;
+            position: relative;
+            user-select: none;
+        }
+        
+        .skill-percent {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #e1f0ff;
+            font-weight: 700;
+            text-shadow: 0 0 5px #5bc0de;
+            user-select: none;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1rem;
+            pointer-events: none;
+        }
+        /* Projects */
+        
+        #projects h2 {
+            color: #87cefa;
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            text-shadow: 0 0 12px #3498db;
+            text-align: center;
+            user-select: none;
+        }
+        
+        label[for="project-select"] {
+            display: block;
+            color: #b4d7ff;
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            user-select: none;
+        }
+        
+        #project-select {
+            width: 100%;
+            padding: 12px 15px;
+            font-size: 1.1rem;
+            border-radius: 12px;
+            border: none;
+            background: #1e2a40;
+            color: #b8d1ff;
+            box-shadow: inset 0 0 8px #3498dbaa;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            user-select: none;
+        }
+        
+        #project-select:hover,
+        #project-select:focus {
+            background-color: #24415c;
+            outline: none;
+        }
+        /* Contact Section */
+        
+        #contact h2 {
+            color: #87cefa;
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            text-align: center;
+            text-shadow: 0 0 12px #3498db;
+            user-select: none;
+        }
+        
+        #contact p {
+            color: #b8d1ff;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            text-align: center;
+            user-select: none;
+        }
+        
+        #contact a {
+            color: #5bc0de;
+            font-weight: 700;
+            text-decoration: none;
+            user-select: text;
+        }
+        
+        #contact a:hover,
+        #contact a:focus {
+            text-decoration: underline;
+            outline: none;
+        }
+        /* Social Icons */
+        
+        .social-icons {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
         }
         
         .social-icons a {
-            text-decoration: none;
-            margin: 0 10px;
             display: inline-block;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, filter 0.3s ease;
+            filter: drop-shadow(0 0 2px #5bc0de);
+            user-select: none;
         }
         
-        .social-icons a:hover {
-            transform: scale(1.2);
+        .social-icons a:hover,
+        .social-icons a:focus {
+            transform: scale(1.3) rotate(5deg);
+            filter: drop-shadow(0 0 6px #87cefa);
+            outline: none;
         }
         
         .social-icons img {
-            width: 40px;
-            height: 40px;
+            width: 45px;
+            height: 45px;
+            border-radius: 8px;
+            user-select: none;
+            cursor: pointer;
+            filter: brightness(1.1);
+            transition: filter 0.3s ease;
         }
         
+        .social-icons img:hover {
+            filter: brightness(1.5);
+        }
+        /* More About Me Button */
+        
         .about-me-link {
-            margin-top: 20px;
+            margin: 40px 0 60px;
             text-align: center;
         }
         
         .about-me-link a {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: 12px;
             text-decoration: none;
-            background-color: #3498db;
+            background: linear-gradient(135deg, #3498db, #5bc0de);
             color: white;
-            padding: 10px 20px;
-            border-radius: 8px;
-            font-weight: bold;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            transition: background 0.3s ease;
+            padding: 14px 28px;
+            border-radius: 40px;
+            font-weight: 900;
+            font-size: 1.1rem;
+            box-shadow: 0 0 25px #5bc0deaa;
+            transition: all 0.4s ease;
+            user-select: none;
+            cursor: pointer;
         }
         
-        .about-me-link a:hover {
-            background-color: #2980b9;
+        .about-me-link a:hover,
+        .about-me-link a:focus {
+            background: linear-gradient(135deg, #5bc0de, #87cefa);
+            box-shadow: 0 0 45px #87cefa;
+            transform: scale(1.05);
+            outline: none;
         }
         
         .about-me-link img {
-            width: 20px;
-            height: 20px;
+            width: 24px;
+            height: 24px;
+            filter: drop-shadow(0 0 2px #d1e9ff);
+        }
+        /* Download CV Button */
+        
+        .download-cv-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            background: linear-gradient(135deg, #4e8cff, #1a5aff);
+            color: #fff;
+            padding: 16px 38px;
+            font-weight: 800;
+            font-family: 'Courier New', Courier, monospace;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 0 18px #3c7be6, 0 0 35px #5e9cff;
+            transition: all 0.35s ease;
+            user-select: none;
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            margin: 0 auto 40px;
+            font-size: 1.25rem;
+            letter-spacing: 1.2px;
+            justify-content: center;
+            width: max-content;
         }
         
-        footer {
-            text-align: center;
-            padding: 20px;
-            font-size: 14px;
-            background-color: #f4f4f4;
-            color: #555;
+        .download-cv-btn:hover,
+        .download-cv-btn:focus {
+            background: linear-gradient(135deg, #1a5aff, #4e8cff);
+            box-shadow: 0 0 30px #3c7be6, 0 0 60px #5e9cff;
+            transform: scale(1.1);
+            outline: none;
+        }
+        /* Download icon animation */
+        
+        .download-cv-btn .icon {
+            font-size: 1.6rem;
+            animation: bounce 2.5s infinite;
+            user-select: none;
+        }
+        
+        @keyframes bounce {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-6px);
+            }
         }
         /* Responsive */
         
-        @media (max-width: 600px) {
+        @media (max-width: 720px) {
+            main {
+                margin: 20px 15px 50px;
+                padding: 20px 20px;
+            }
             .profile-card {
                 flex-direction: column;
                 text-align: center;
             }
             .profile-card img {
-                margin-bottom: 20px;
+                margin-bottom: 25px;
             }
         }
-        /* Bright/light Download CV Button style */
         
-        .download-cv-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: linear-gradient(135deg, #5bc0de, #87cefa);
-            color: #fff;
-            padding: 12px 25px;
-            font-weight: 700;
-            font-family: 'Courier New', Courier, monospace;
-            border: 2px solid #87cefa;
-            border-radius: 30px;
-            cursor: pointer;
-            box-shadow: 0 0 8px #5bc0de, 0 0 16px #87cefa;
-            transition: all 0.3s ease;
+        @media (max-width: 400px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            nav a {
+                margin: 0 10px;
+                font-size: 1rem;
+            }
+            .download-cv-btn {
+                padding: 14px 25px;
+                font-size: 1rem;
+                gap: 8px;
+            }
+            .about-me-link a {
+                padding: 12px 22px;
+                font-size: 1rem;
+            }
+        }
+        /* CSS for the link */
+        
+        .link-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #1e90ff;
+            color: white;
             text-decoration: none;
-            user-select: none;
-            margin: 40px auto 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
         }
         
-        .download-cv-btn:hover {
-            background: linear-gradient(135deg, #87cefa, #5bc0de);
-            box-shadow: 0 0 12px #5bc0de, 0 0 24px #87cefa;
-            transform: scale(1.05);
+        .link-button:hover {
+            background-color: #3742fa;
         }
     </style>
 </head>
 
 <body>
 
-    <marquee behavior="scroll" direction="left">Welcome to Utsab Gautam's official Website! 🚀</marquee>
+    <marquee behavior="scroll" direction="left" scrollamount="8" aria-label="Welcome message">Welcome to Utsab Gautam's official Website! 🚀</marquee>
 
     <header>
         <h1>Welcome to My Website</h1>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+        <nav aria-label="Primary navigation">
+            <a href="#about" tabindex="1">About</a>
+            <a href="#skills" tabindex="2">Skills</a>
+            <a href="#projects" tabindex="3">Projects</a>
+            <a href="#contact" tabindex="4">Contact</a>
         </nav>
     </header>
 
     <main>
 
-        <section class="profile-card" id="about">
-            <img src="IMG_20250712_175458.jpg" alt="Utsab Gautam" />
+        <section class="profile-card" id="about" tabindex="0" aria-label="About Utsab Gautam">
+            <img src="IMG_20250712_175458.jpg" alt="Photo of Utsab Gautam" loading="lazy" />
             <div class="bio">
                 <h2>Utsab Gautam</h2>
                 <p>
@@ -238,61 +519,163 @@
             </div>
         </section>
 
-        <div class="about-me-link">
-            <a href="aboutme.html" target="_blank">
+        <div class="about-me-link" aria-label="More about me">
+            <a href="aboutme.html" target="_blank" rel="noopener noreferrer" tabindex="5">
                 <img src="https://cdn-icons-png.flaticon.com/512/1828/1828490.png" alt="About Icon" /> More About Me
             </a>
         </div>
 
-        <section id="projects">
-            <h2>My Projects</h2>
-            <label for="project-select">Select a Project:</label>
-            <select id="project-select">
-                <option disabled selected>Select...</option>
-                <option value="lifeblood">LifeBlood – Blood Donation Management System</option>
-            </select>
-            <script>
-                document.getElementById("project-select").addEventListener("change", function() {
-                    if (this.value === "lifeblood") {
-                        window.open("lifeblood-donors.html", "_blank");
-                    }
-                });
-            </script>
+        <!-- Skills Section -->
+        <section id="skills" aria-label="Skills and proficiency levels">
+            <h2>My Skills</h2>
+
+            <div class="skill" data-skill="C" data-level="50">
+                <div class="skill-name">C</div>
+                <div class="skill-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="C skill level">
+                    <div class="skill-bar-fill"></div>
+                    <div class="skill-percent">0%</div>
+                </div>
+            </div>
+
+            <div class="skill" data-skill="HTML" data-level="75">
+                <div class="skill-name">HTML</div>
+                <div class="skill-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="HTML skill level">
+                    <div class="skill-bar-fill"></div>
+                    <div class="skill-percent">0%</div>
+                </div>
+            </div>
+
+            <div class="skill" data-skill="CSS" data-level="40">
+                <div class="skill-name">CSS</div>
+                <div class="skill-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="CSS skill level">
+                    <div class="skill-bar-fill"></div>
+                    <div class="skill-percent">0%</div>
+                </div>
+            </div>
+
+            <div class="skill" data-skill="Photoshop" data-level="50">
+                <div class="skill-name">Photoshop</div>
+                <div class="skill-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Photoshop skill level">
+                    <div class="skill-bar-fill"></div>
+                    <div class="skill-percent">0%</div>
+                </div>
+            </div>
+
+            <div class="skill" data-skill="Canva" data-level="75">
+                <div class="skill-name">Canva</div>
+                <div class="skill-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Canva skill level">
+                    <div class="skill-bar-fill"></div>
+                    <div class="skill-percent">0%</div>
+                </div>
+            </div>
+
         </section>
 
-        <section id="contact">
+        <section id="projects" aria-label="Projects">
+            <h2>My Projects</h2>
+            <label for="project-select">Select a Project:</label>
+            <select id="project-select" aria-describedby="project-desc" tabindex="6">
+        <option disabled selected>Select...</option>
+        <option value="lifeblood">LifeBlood – Blood Donation Management System</option>
+      </select>
+            <p id="project-desc" style="color: #b4d7ff; margin-top: 8px; font-style: italic; user-select:none;">
+                Choose a project from the dropdown above to explore more.
+            </p>
+        </section>
+        <a href="cricket technology.html" class="link-button">
+            <center>Go to Cricket Technology Article </a>
+        </center>
+
+        <section id="contact" aria-label="Contact Information">
             <h2>Contact Me</h2>
-            <p>Email: <a href="mailto:gautamutsab2005@gmail.com">gautamutsab2005@gmail.com</a></p>
-            <p>Phone: 9746930981</p>
-            <div class="social-icons">
-                <a href="https://www.facebook.com/utsab.gautam.798" target="_blank">
-                    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" />
+            <p>Email: <a href="mailto:gautamutsab2005@gmail.com" tabindex="7">gautamutsab2005@gmail.com</a></p>
+            <p>Phone: <a href="tel:+9779746930981" tabindex="8" style="color: #5bc0de; font-weight: 700; text-decoration: none;">+977 9746930981</a></p>
+            <div class="social-icons" role="list" aria-label="Social media links">
+                <a href="https://www.facebook.com/utsab.gautam.798" target="_blank" rel="noopener noreferrer" role="listitem" tabindex="9" aria-label="Facebook">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook icon" />
                 </a>
-                <a href="https://www.linkedin.com/in/utsab-gautam-aa7264309?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
-                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" />
+                <a href="https://www.linkedin.com/in/utsab-gautam-aa7264309?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" role="listitem" tabindex="10" aria-label="LinkedIn">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn icon" />
                 </a>
-                <a href="https://github.com/gautamutsab" target="_blank">
-                    <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub" />
+                <a href="https://github.com/gautamutsab" target="_blank" rel="noopener noreferrer" role="listitem" tabindex="11" aria-label="GitHub">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub icon" />
                 </a>
-                <a href="https://www.instagram.com/utsabgautam28/" target="_blank">
-                    <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram" />
+                <a href="https://www.instagram.com/utsabgautam28/" target="_blank" rel="noopener noreferrer" role="listitem" tabindex="12" aria-label="Instagram">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram icon" />
                 </a>
             </div>
         </section>
 
-        <!-- Bright/light Download CV Button at bottom -->
-        <div style="text-align: center;">
-            <a href="Utsab. Gautam CV(official).pdf" download class="download-cv-btn" aria-label="Download Utsab Gautam's CV">
-                &#128187; Download CV
+        <!-- Download CV Button -->
+        <div style="text-align: center;" aria-label="Download CV button">
+            <a href="Utsab. Gautam CV(official).pdf" download class="download-cv-btn" tabindex="13" aria-describedby="download-desc" aria-label="Download Utsab Gautam's CV">
+                <span class="icon" aria-hidden="true">&#128187;</span> Download CV
             </a>
+            <p id="download-desc" style="color: #a2c7ff; font-size: 0.9rem; margin-top: 8px; user-select:none;">Click to download my official CV</p>
         </div>
 
     </main>
 
-    <footer>
+    <footer aria-label="Footer">
         &copy; 2025 Utsab Gautam. All rights reserved.
     </footer>
 
+    <script>
+        // Animate Skills Progress Bars on scroll into view
+        document.addEventListener("DOMContentLoaded", () => {
+            const skills = document.querySelectorAll("#skills .skill");
+
+            function animateSkills() {
+                skills.forEach(skill => {
+                    const skillBar = skill.querySelector(".skill-bar-fill");
+                    const skillPercent = skill.querySelector(".skill-percent");
+                    const level = skill.getAttribute("data-level");
+
+                    // Animate if not already animated
+                    if (!skillBar.style.width || skillBar.style.width === "0%") {
+                        let current = 0;
+                        const stepTime = 20; // ms
+                        const stepIncrement = level / (1000 / stepTime); // total 1s animation approx.
+
+                        function step() {
+                            if (current < level) {
+                                current += stepIncrement;
+                                if (current > level) current = level;
+                                skillBar.style.width = current + "%";
+                                skillPercent.textContent = Math.round(current) + "%";
+                                skillBar.setAttribute("aria-valuenow", Math.round(current));
+                                requestAnimationFrame(step);
+                            }
+                        }
+                        step();
+                    }
+                });
+            }
+
+            // Intersection Observer to trigger animation once skills section visible
+            const skillsSection = document.getElementById("skills");
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateSkills();
+                        observer.unobserve(skillsSection); // Animate once only
+                    }
+                });
+            }, {
+                threshold: 0.5,
+            });
+
+            observer.observe(skillsSection);
+
+            // Project select interaction
+            const projectSelect = document.getElementById("project-select");
+            projectSelect.addEventListener("change", function() {
+                if (this.value === "lifeblood") {
+                    window.open("lifeblood-donors.html", "_blank", "noopener,noreferrer");
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
