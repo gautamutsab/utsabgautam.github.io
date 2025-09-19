@@ -855,4 +855,1718 @@
 
 </body>
 
+</html><!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gen Z Protest in Nepal — How Youth Made the Government Kneel</title>
+    <style>
+         :root {
+            --accent: #2c3e50;
+            --muted: #6b7280;
+            --card-bg: rgba(255, 255, 255, 0.95);
+            --glass: rgba(255, 255, 255, 0.85);
+            --toast-bg: #111;
+        }
+        
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            color: #222;
+        }
+        
+        body {
+            background: url("protest8.jpg") center/cover fixed no-repeat;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .page-wrap {
+            min-height: 100%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+        }
+        
+        header {
+            width: 100%;
+            max-width: 1100px;
+            color: #fff;
+            margin-bottom: 20px;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            background: linear-gradient(90deg, rgba(44, 62, 80, 0.95), rgba(32, 48, 70, 0.95));
+            box-shadow: 0 6px 22px rgba(0, 0, 0, 0.4);
+            position: relative;
+        }
+        
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+            line-height: 1.1;
+        }
+        
+        header p {
+            margin: 6px 0 0;
+            color: #e6eef8;
+            font-size: 14px;
+        }
+        
+        #google_translate_wrapper {
+            position: fixed;
+            top: 16px;
+            right: 16px;
+            display: flex;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 6px 10px;
+            border-radius: 8px;
+            z-index: 9999;
+        }
+        
+        #google_translate_element select {
+            padding: 6px 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            background: #fff;
+            color: #333;
+            cursor: pointer;
+        }
+        
+        .author-box {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            background: var(--glass);
+            padding: 12px 14px;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 700px;
+            margin: 12px auto 20px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+        }
+        
+        .author-box img {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #fff;
+        }
+        
+        .author-meta {
+            font-size: 14px;
+            color: #111
+        }
+        
+        .author-meta strong {
+            display: block;
+            color: var(--accent);
+            font-size: 15px
+        }
+        
+        main.article {
+            width: 100%;
+            max-width: 1100px;
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: 26px;
+            box-shadow: 0 10px 30px rgba(2, 6, 23, 0.25);
+            box-sizing: border-box;
+            margin-bottom: 24px;
+        }
+        
+        h2 {
+            color: var(--accent);
+            margin-top: 22px
+        }
+        
+        p {
+            margin: 12px 0;
+            line-height: 1.6
+        }
+        
+        ul {
+            margin: 10px 0 18px 20px
+        }
+        
+        li {
+            margin-bottom: 8px
+        }
+        
+        .slideshow {
+            position: relative;
+            max-width: 100%;
+            margin: 20px 0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .slideshow img {
+            width: 100%;
+            display: block;
+        }
+        
+        .slide-controls {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: space-between;
+            padding: 0 8px;
+            pointer-events: none;
+        }
+        
+        .btn-slide {
+            pointer-events: auto;
+            background: rgba(0, 0, 0, 0.45);
+            color: #fff;
+            border: none;
+            padding: 10px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        
+        .dots {
+            display: flex;
+            gap: 6px;
+            justify-content: center;
+            margin-top: 8px
+        }
+        
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ccc;
+            cursor: pointer;
+        }
+        
+        .dot.active {
+            background: var(--accent)
+        }
+        
+        .comment-section {
+            margin-top: 26px
+        }
+        
+        .comment-card {
+            background: #f4f6f8;
+            padding: 16px;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 0, 0, 0.04);
+        }
+        
+        .comment-card h3 {
+            margin: 0 0 8px 0
+        }
+        
+        .comment-card textarea,
+        .comment-card input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #d1d5db;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        
+        .comment-actions {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-top: 8px
+        }
+        
+        .btn-primary {
+            background: var(--accent);
+            color: #fff;
+            padding: 10px 14px;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer
+        }
+        
+        .btn-secondary {
+            background: #fff;
+            border: 1px solid #cbd5e1;
+            padding: 9px 12px;
+            border-radius: 6px;
+            cursor: pointer
+        }
+        
+        .comments-list {
+            margin-top: 14px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px
+        }
+        
+        .single-comment {
+            background: white;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .single-comment .meta {
+            font-size: 12px;
+            color: var(--muted);
+            margin-bottom: 6px
+        }
+        
+        .single-comment p {
+            margin: 6px 0 0
+        }
+        
+        .toast {
+            position: fixed;
+            right: 18px;
+            bottom: 18px;
+            background: var(--toast-bg);
+            color: #fff;
+            padding: 12px 16px;
+            border-radius: 8px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+            z-index: 9999;
+            display: none;
+            font-size: 14px;
+        }
+        
+        footer {
+            width: 100%;
+            max-width: 1100px;
+            border-radius: 8px;
+            text-align: center;
+            padding: 12px;
+            background: linear-gradient(90deg, rgba(44, 62, 80, 0.96), rgba(20, 30, 48, 0.96));
+            color: #fff;
+        }
+        
+        @media (max-width:700px) {
+            header h1 {
+                font-size: 20px;
+            }
+            .author-box {
+                padding: 10px;
+            }
+            .author-box img {
+                width: 64px;
+                height: 64px;
+            }
+            .btn-slide {
+                padding: 8px 10px;
+                font-size: 16px;
+            }
+        }
+        /* Comment Section Styling */
+        
+        .comment-section {
+            max-width: 800px;
+            margin: 30px auto;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+            font-size: 18px;
+        }
+        
+        .comment-section h3 {
+            font-size: 28px;
+            margin-bottom: 18px;
+            color: #2c3e50;
+        }
+        
+        .comment-section input[type="text"],
+        .comment-section input[type="email"],
+        .comment-section textarea {
+            width: 100%;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            font-size: 18px;
+            box-sizing: border-box;
+        }
+        
+        .comment-section textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .comment-section button[type="submit"] {
+            background: #2c3e50;
+            color: #fff;
+            padding: 16px 24px;
+            font-size: 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        
+        .comment-section button[type="submit"]:hover {
+            background: #1b2a38;
+        }
+        /* Displayed Comments */
+        
+        #commentsList div {
+            border: 2px solid #2c3e50;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 12px;
+            font-size: 18px;
+            background: #f7f9fb;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-wrap">
+
+        <header>
+            <div id="google_translate_wrapper">
+                <label for="google_translate_element" style="margin-right:8px; font-weight:600; color:#fff;">भाषा छान्नुहोस्:</label>
+                <div id="google_translate_element"></div>
+            </div>
+
+            <h1>Gen Z Protest in Nepal: How Youth Made the Government Kneel within 48 Hours</h1>
+            <p>A first-hand narrative and analysis of the Gen Z movement that shook Nepal on 23rd–24th Bhadra</p>
+        </header>
+
+        <div class="author-box">
+            <img src="My photo.jpg" alt="Author Utsab Gautam">
+            <div class="author-meta">
+                <strong>Utsab Gautam</strong> Sisne-06, Rukum (East)<br> Eyewitness & Author
+            </div>
+        </div>
+
+        <main class="article">
+
+            <h2>Who are Gen Z?</h2>
+            <p>In the context of Nepal, Generation Z refers to young people born between 1997 AD and 2012 AD who grew up during the country’s political transition and rapid digital expansion. As the first digital-native generation in Nepal, they are highly
+                active on social media and increasingly vocal in raising their voices against corruption, unemployment, and weak governance through online campaigns and street protests.</p>
+
+            <!-- Background -->
+            <h2>Background and Causes of the Gen Z Protest</h2>
+            <p>Political change in Nepal was necessary, but over the last decade, the post of prime minister has become a musical chair among three powerful leaders K.P. Oli, Sher Bahadur Deuba, and Pushpa Kamal Dahal. This political instability was largely
+                a result of Nepal’s electoral system. The system is structured in such a way that entrenched political elites, and corrupt individuals often remain protected, making meaningful reform difficult.</p>
+
+            <p>The Gen Z protest is not simply an outburst of anger over the recent social media ban. That issue acted only as a spark of fire. The real “fuel” for the protest had been accumulating for years under successive governments. Corruption has penetrated
+                every level of governance from local ward offices to the prime minister’s chair. Nepali citizens, especially the youth, see little accountability and no hope of change under the existing leadership.</p>
+
+            <p>Another factor fueling resentment is the luxury lifestyle of politicians’ children. Many of today’s leaders once came to Kathmandu barefoot during their youth, yet now their families live lavishly while ordinary Nepalis struggle with unemployment,
+                inflation, and poverty. These raises pressing questions: How did these leaders acquire such wealth? How do their children afford a lifestyle far beyond the means of ordinary citizens? These concerns are especially powerful for Gen Z, who
+                feel cheated as they see leader's families enjoy luxuries funded by taxpayers who workday and night.</p>
+
+            <p>At its core, the Gen Z protest is a response to systemic corruption, nepotism, and the concentration of power among three dominant leaders. The frustration is not limited to a single event; rather, it reflects years of betrayal, inequality,
+                and lack of accountability.</p>
+
+            <h2><strong>Key Events and Demands of the Gen Z Protest in Nepal:</strong></h2>
+            <p>The Gen Z protest in Nepal was not organized merely to showcase power against the government. Rather, it was driven by specific demands that the youth wanted the authorities to address. When peaceful appeals are ignored, protest becomes the
+                only tool to push for change and this generation chooses that path out of necessity, not aggression.</p>
+
+            <p>Protesters mobilized through social media platforms, gathering in public spaces such as Maitighar Mandala, Koteshwor, and Tinkune. They carried placards, chanted slogans, and live-streamed the events online, ensuring that their voices were
+                amplified both on the streets and across digital platforms. The demonstrations remained largely peaceful, but the sheer energy, determination, and numbers of participants revealed the depth of frustration among Nepal’s youth. Importantly,
+                these rallies brought together students, young professionals, and ordinary citizens across political divides proving that this was not a partisan struggle but a generational demand for genuine reform.</p>
+
+            <p>The key demands of the Gen Z protesters included:</p>
+            <ul>
+                <li><strong>End to Corruption and Nepotism:</strong> A demand for transparency in governance and accountability from political leaders at all levels.</li>
+                <li><strong>Political Reform:</strong> An end to the “musical chair” politics dominated by the same three leaders for decades.</li>
+                <li><strong>Freedom of Expression:</strong> Rejection of the proposed social media restrictions and protection of online rights as part of democratic freedoms.</li>
+                <li><strong>Economic Opportunities:</strong> Stronger employment policies, encouragement of entrepreneurship, and measures to curb the mass migration of youth seeking work abroad.</li>
+                <li><strong>Equality and Justice:</strong> Reduction of social inequalities, fair distribution of resources, and improvements in public services such as education, healthcare, and infrastructure.</li>
+            </ul>
+
+            <!-- slideshow gallery -->
+            <h2>Photo Gallery of the Protest</h2>
+            <h2>Photo Gallery</h2>
+            <div class="slideshow" aria-label="Protest slideshow">
+                <div class="slideshow" aria-label="Protest images slideshow">
+                    <img class="slides" src="protest2.jpg" alt="Protest image 2 — Singadurbar after protest ">
+                    <img class="slides" src="protest3.jpg" alt="Protest image 3 — people at parliament when it was burning">
+                    <img class="slides" src="protest4.jpg" alt="Protest image 4 — Brave person in the protest">
+                    <img class="slides" src="protest5.jpg" alt="Protest image 5 — Burning Central office of Nepal communist party (Maoist)">
+                    <img class="slides" src="protest6.jpg" alt="Protest image 6 —Burning Central office of Nepal communist party (UML)">
+                    <img class="slides" src="protest 8.jpg" alt="Protest image 8 — People at protest ">
+                    <img class="slides" src="protest7.jpg" alt="Protest image 8 — Burning image of central officer of Nepali Congress ">
+                    <img class="slides" src="protest9.jpg" alt="Protest image 9 — Condition of corrupted Sher Bahadur deuba and Arju deuba rana ">
+
+                    <div class="slide-controls">
+                        <button class="btn-slide" id="prevBtn">&#10094;</button>
+                        <button class="btn-slide" id="nextBtn">&#10095;</button>
+                    </div>
+                </div>
+
+                <!-- controls -->
+                <div class="slide-controls" aria-hidden="true">
+                    <button class="btn-slide" id="prevBtn" title="Previous slide" aria-label="Previous slide">&#10094;</button>
+                    <button class="btn-slide" id="nextBtn" title="Next slide" aria-label="Next slide">&#10095;</button>
+                </div>
+            </div>
+            <div class="dots" id="dots" role="tablist" aria-label="Slide indicators"></div>
+
+            <!-- long eyewitness text on 23rd / 24th bhadra -->
+            <h2>The Protests of 23rd and 24th Bhadra: A Turning Point</h2>
+
+            <p>The demonstrations on 23rd and 24th Bhadra marked a decisive moment in the Gen Z protest movement. What had begun as scattered gatherings and online campaigns quickly transformed into mass mobilization across Kathmandu. On these two days,
+                the frustration of Nepal’s youth was fully visible on the streets.</p>
+
+            <p>I personally witnessed the protests at locations such as Maitighar Mandala, Koteshwor, and Tinkune, where thousands of young people carried placards, shouted slogans, and broadcast live on social media. The energy of the crowds was unmistakable
+                — peaceful yet determined. It was clear that this was not a symbolic march but a serious demand for accountability and reform.</p>
+
+            <p><strong>On 23rd Bhadra,</strong> I witnessed a significant Gen Z protest in Kathmandu along the route from Maitighar to New Baneshwor. I arrived at Maitighar at 11:00 AM, where a mix of protesters had already gathered, including groups advocating
+                issues such as sugarcane farmers’ rights. The Gen Z protesters ranged from +2 students to master’s graduates, with some students in school uniforms, led in a disciplined manner by their school leaders. While not all schools and colleges
+                participated, several had sent students to join the movement.</p>
+
+            <p>The crowd began marching toward Baneshwor, and I joined them. This was my first ever protest, and many others were in the same situation. The atmosphere was peaceful yet energetic. Protesters carried posters, banners, and pamphlets, with slogans
+                and messages criticizing corruption and demanding reform. Motorcycles patrolled the march, their loud silencers echoing like a warning to the government. Influencers, volunteers, and social workers were also present, helping participants
+                and ensuring the protest remained organized.</p>
+
+            <p>However, as we approached Baneshwor, the situation began to escalate. Some protesters attempted to approach Parliament, while the police tried to control the crowd using tear gas, water cannons, and warning shots. Despite these measures, the
+                protesters’ anger and determination were evident. Observing the rising tension, I advised my companions to move to a safer area near Everest Hospital. From there, we could see and hear the chaotic scene: bullets fired into the air, people
+                running to protect themselves, and ambulances arriving to rescue the injured. Many of the wounded were students, highlighting the youth-driven nature of the protest. Witnessing this, I questioned how law enforcement could justify such
+                force against peaceful young citizens.</p>
+
+            <p>By late afternoon, around 2:30–4:00 PM, I left the protest and returned home. Social media later revealed reports of injuries and casualties, mostly among youth who had come to demand positive change for Nepal. While the exact number of deaths
+                on that day was under ten, the impact on participants and observers was profound. Many protesters remained in the area into the night, determined not to let fear silence them, and I found it difficult to sleep, haunted by the scenes I
+                had witnessed.</p>
+
+            <p>This day was a turning point, showing that Nepal’s youth are willing to stand up for their rights, demand systemic change, and challenge entrenched political elites. It was clear that this protest was not merely a demonstration of power but
+                a serious call for accountability, transparency, and reform in Nepal.</p>
+
+            <p><strong>On 24th Bhadra,</strong> the situation was completely different. While the protest on 23rd Bhadra had largely remained peaceful, the actions of the government perceived as dictatorial and dismissive toward its citizens ignited widespread
+                anger. It was as if the government had provoked a sleeping lion; the frustration and sense of injustice among the protesters and ordinary citizens erupted with force.</p>
+
+            <p>On this day, the protests were no longer limited to students or Gen Z. Citizens from across Kathmandu Valley joined the movement, and crowds surrounded the homes of politicians, ministers, and individuals linked to political parties, as well
+                as offices of central, provincial, and local political institutions. This massive mobilization occurred not only in Kathmandu but also in surrounding areas.</p>
+
+            <p>In many locations, protesters targeted corrupt individuals’ properties. Houses of politicians and government officials were set on fire, and some police stations were attacked. Reports indicate large amounts of cash and luxury items were discovered
+                and destroyed during these events. However, alongside acts of targeting corrupt wealth, external actors exploited the unrest to damage public property and private businesses that employ thousands. Important government buildings and marketplaces
+                were harmed — causing deep consequences for ordinary citizens and workers.</p>
+
+            <p>The situation prompted the deployment of the Nepal Army around 10 PM. Although delayed, the army’s intervention helped restore order and protect civilians. By that time, weapons had been captured by external actors and prisoners escaped from
+                jails in some areas. Once the army regained control, the streets became safer and the public felt relief.</p>
+
+            <p style="color:#4c05ff">Singha Durbar and other historical government buildings were damaged, but the loss of human life was far more significant. Dozens of citizens were injured or killed in these events — young people who had come to demand change. While government
+                buildings can be rebuilt, lives lost cannot. These two days left the entire country in grief and reflection, highlighting both the passion for justice and the dangers of uncontrolled violence during mass movements.</p>
+            <p> Together, the events of 23rd and 24th Bhadra demonstrated both the passion and determination of Nepal’s youth and the challenges of channeling mass protests in a way that enforces accountability while protecting innocent lives and public property.
+                For Gen Z, these days were not just protests, they were a statement that the younger generation will no longer remain silent in the face of corruption, political stagnation, and social injustice.</p>
+
+            <h2>Party First, Nation Forgotten</h2>
+            <p>Nepal today is in deep crisis. From economic struggles to corruption, unemployment to youth migration, every sector is suffering. Prices of basic goods are rising, industries are collapsing, students are living in thousands, hospitals lack
+                proper care, farmers are ignored, and corruption has become normal in government offices. Instead of solving these problems, our politicians and their party members are busy in something else building their parties, not building the nation.</p>
+            <p>The recent incidents of 23rd and 24th Bhadra proved this reality once again. When thousands of youths came to the streets, raising their voices against corruption, unemployment, and the negligence of leaders, what did the politicians do? They
+                remained silent. Not a single meaningful word came from party members or leaders. Instead of listening to the pain of the people, they were busy protecting their chairs, their posts, and their parties.</p>
+            <p>From local party workers to ministers in power, everyone is more concerned about defending corruption and pleasing their leaders. They do not accept mistakes, they do not learn from failure, and they continue to close their eyes to the nation’s
+                suffering. Their voices are loud only inside party meetings, but completely silent when the streets are filled with young citizens demanding change.</p>
+            <p>What is even more painful is that they misuse the names of great leaders like B.P. Koirala and Madan Bhandari. These two visionaries had clear ideologies and worked for the people, but today’s politicians only use their names during elections
+                to collect votes. Their principles of justice, socialism, democracy, and equality are forgotten. In reality, no one is following ideology they are only hungry for power.</p>
+            <p>This hunger for power has blinded them. While the country is facing unemployment, poverty, corruption, poor education, weak health system, lack of industries, and a mass brain-drain of youth, our leaders are fighting only for positions. </p>
+            <p> From the grassroots to the central level, the story is the same. Party members follow the same culture of defending wrong instead of standing for the right. They do not question corruption inside their own party. They do not speak against
+                injustice. For them, protecting the party is more important than protecting Nepal.</p>
+            <p>This culture must end. If we really want to save the country, we must bring change from the grassroots level. Parties cannot be bigger than the nation. Leaders and members must learn to admit mistakes, follow ideology, and put the people first.
+                Otherwise, history will remember today’s politicians not as nation-builders, but as the very people who betrayed Nepal in its time of greatest need. </p>
+            <p>The Gen Z protests of 23rd and 24th Bhadra are proof that young Nepalis will not remain silent forever. The youth are already questioning this broken system. If politicians do not change, the new generation will force change. It is time to
+                stop building only party offices and start building the nation of Nepal.</p>
+            <h2>Way Forward: Building a Nation Beyond Parties</h2>
+            <p>The protests have shown that Nepal cannot continue the same path. Real reforms are required in governance, anti-corruption, economic policy, education, and health. The youth must be included in policy decisions and leaders must prioritize
+                national interest above party competition.</p>
+
+            <ul>
+                <li><strong>Good Governance and Rule of Law:</strong> Immediate, transparent investigations into corruption; implement laws fairly.</li>
+                <li><strong>Ending Corruption from Ground Level:</strong> Digital governance, transparent spending, citizen monitoring.</li>
+                <li><strong>Economic Reform and Job Creation:</strong> Support local industries, entrepreneurship, and job creation to reduce brain drain.</li>
+                <li><strong>Education and Health:</strong> Reform public services to be accessible and high-quality.</li>
+                <li><strong>Youth Inclusion:</strong> Youth voices must be part of decision-making at all levels.</li>
+                <li><strong>Transparency and Accountability:</strong> Open budgets and regular public reporting.</li>
+                <li><strong>National Unity:</strong> Parties must put national interest above their own competition.</li>
+                <li><strong>Directly Elected Prime Minister:</strong> Consider electoral reform to strengthen accountability of the executive to voters.</li>
+            </ul>
+
+            <h2>Conclusion: A call for real change</h2>
+            <p>The incidents of 23rd and 24th Bhadra sent a clear message: the youth will not remain silent. At a time when politicians hid behind party walls, the Nepali Army stepped in to restore order and deserves thanks for protecting citizens. We congratulate
+                interim leaders entrusted with stewardship and ask them to act strictly in lines to address corruption, listen to Gen Z, investigate misuse of public funds, and ensure the sacrifices of citizens are not wasted.</p>
+            <p style="color:#c62828">"All the data and information are taken from internet research and different websites. So there may be some error. If there are any errors or misinformation I apologize for my mistake."</p>
+
+            <p style="text-align:center;color:#08c06b;font-weight:600">
+                <h1>Thank you!!</h1>
+            </p>
+
+
+            <div class="dots" id="dots"></div>
+
+        </main>
+        <footer>&copy; 2025 Gen Z Protest Coverage | All rights reserved</footer>
+    </div>
+    <div class="toast" id="toast"></div>
+
+    <script>
+        // Google Translate
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,ne',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+        (function() {
+            var s = document.createElement('script');
+            s.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+            document.head.appendChild(s);
+        })();
+
+        // Slideshow
+        (function() {
+            const slides = Array.from(document.querySelectorAll('.slides'));
+            const dotsContainer = document.getElementById('dots');
+            let index = 0;
+            slides.forEach((_, i) => {
+                const dot = document.createElement('span');
+                dot.className = 'dot';
+                dot.dataset.i = i;
+                dot.addEventListener('click', () => showSlide(i));
+                dotsContainer.appendChild(dot);
+            });
+
+            function showSlide(i) {
+                slides.forEach(s => s.style.display = 'none');
+                const dots = dotsContainer.querySelectorAll('.dot');
+                dots.forEach(d => d.classList.remove('active'));
+                index = (i + slides.length) % slides.length;
+                slides[index].style.display = 'block';
+                dots[index].classList.add('active');
+            }
+
+            function nextSlide() {
+                showSlide(index + 1)
+            }
+
+            function prevSlide() {
+                showSlide(index - 1)
+            }
+            document.getElementById('nextBtn').addEventListener('click', () => nextSlide());
+            document.getElementById('prevBtn').addEventListener('click', () => prevSlide());
+            showSlide(0);
+            setInterval(nextSlide, 4000);
+        })();
+
+        // Comments
+        (function() {
+            const postBtn = document.getElementById('postBtn');
+            const clearBtn = document.getElementById('clearBtn');
+            const commentInput = document.getElementById('commentInput');
+            const emailInput = document.getElementById('emailInput');
+            const commentsList = document.getElementById('commentsList');
+            const toastEl = document.getElementById('toast');
+
+            function showToast(msg, time = 3000) {
+                toastEl.textContent = msg;
+                toastEl.style.display = 'block';
+                setTimeout(() => toastEl.style.display = 'none', time);
+            }
+
+            function nowString() {
+                return new Date().toLocaleString();
+            }
+
+            function loadComments() {
+                const raw = localStorage.getItem('genz_comments_v1');
+                if (!raw) return [{
+                    text: "Amazing coverage, thanks!",
+                    email: "example1@gmail.com",
+                    date: nowString()
+                }, {
+                    text: "Youth are the real change-makers.",
+                    email: "example2@gmail.com",
+                    date: nowString()
+                }];
+                try {
+                    return JSON.parse(raw);
+                } catch (e) {
+                    return [];
+                }
+            }
+
+            function saveComments(arr) {
+                localStorage.setItem('genz_comments_v1', JSON.stringify(arr));
+            }
+
+            function renderComments() {
+                const arr = loadComments();
+                commentsList.innerHTML = '';
+                if (arr.length === 0) {
+                    commentsList.innerHTML = '<div style="color:var(--muted);padding:8px">No comments yet.</div>';
+                    return;
+                }
+                arr.slice().reverse().forEach(c => {
+                    const node = document.createElement('div');
+                    node.className = 'single-comment';
+                    node.innerHTML = `<div class="meta">${c.date}${c.email?(' • '+c.email):''}</div><p>${c.text}</p>`;
+                    commentsList.appendChild(node);
+                });
+            }
+            postBtn.addEventListener('click', () => {
+                const text = commentInput.value.trim();
+                const email = emailInput.value.trim();
+                if (!text) {
+                    showToast('Write a comment first.');
+                    return;
+                }
+                const arr = loadComments();
+                arr.push({
+                    text,
+                    email: email || null,
+                    date: nowString()
+                });
+                saveComments(arr);
+                renderComments();
+                commentInput.value = '';
+                emailInput.value = '';
+                showToast('Comment saved locally.');
+            });
+            clearBtn.addEventListener('click', () => {
+                commentInput.value = '';
+                emailInput.value = '';
+            });
+            commentInput.addEventListener('keydown', (e) => {
+                if (e.ctrlKey && e.key === 'Enter') postBtn.click();
+            });
+            renderComments();
+        })();
+    </script>
+    <!-- Comment Section -->
+    <section class="comment-section">
+        <h3>Leave a Comment</h3>
+        <form id="commentForm">
+            <input type="text" name="from_name" placeholder="Your Name" required>
+            <input type="email" name="from_email" placeholder="Your Email" required>
+            <textarea name="comment" placeholder="Write your comment" required></textarea>
+            <button type="submit">Post Comment</button>
+        </form>
+        <div id="commentsList"></div>
+    </section>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        // Initialize EmailJS
+        emailjs.init("NqbCbL42heq6ParWJ"); // your public key
+
+        const commentForm = document.getElementById('commentForm');
+        const commentsList = document.getElementById('commentsList');
+
+        function nowString() {
+            return new Date().toLocaleString();
+        }
+
+        function loadComments() {
+            return JSON.parse(localStorage.getItem('genz_comments_v1') || "[]");
+        }
+
+        function saveComments(arr) {
+            localStorage.setItem('genz_comments_v1', JSON.stringify(arr));
+        }
+
+        function renderComments() {
+            const arr = loadComments();
+            commentsList.innerHTML = '';
+            arr.slice().reverse().forEach(c => {
+                const div = document.createElement('div');
+                div.className = 'single-comment';
+                div.innerHTML = `<div class="meta">${c.date}${c.email ? (' • '+c.email) : ''}</div><p>${c.text}</p>`;
+                commentsList.appendChild(div);
+            });
+        }
+
+        commentForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = commentForm.from_name.value.trim();
+            const email = commentForm.from_email.value.trim();
+            const text = commentForm.comment.value.trim();
+
+            if (!text) return alert('Write a comment first.');
+
+            // Save locally
+            const arr = loadComments();
+            arr.push({
+                text,
+                email,
+                date: nowString()
+            });
+            saveComments(arr);
+            renderComments();
+
+            // Send via EmailJS
+            emailjs.sendForm("gen Z protest", "template_cpysxrm", this)
+                .then(() => alert('✅ Comment sent via EmailJS!'))
+                .catch(err => {
+                    alert('❌ Failed to send comment via EmailJS');
+                    console.error(err);
+                });
+
+            commentForm.reset();
+        });
+    </script>
+    <!-- ====== Read Full Article Section ====== -->
+    <section class="read-full">
+        <h2>📖 Read the Full Article</h2>
+        <p>You can preview the article below or click the button to download the complete PDF.</p>
+
+        <div class="pdf-box">
+            <iframe src="Gen Z Protest .pdf" title="Gen-Z PDF Preview"></iframe>
+        </div>
+
+        <div class="pdf-actions">
+            <a href="Gen Z Protest .pdf" download="gen-z.pdf" class="btn-download">⬇ Download Full PDF</a>
+            <a href="Gen Z Protest .pdf" target="_blank" class="btn-read">🔎 Open in New Tab</a>
+        </div>
+    </section>
+
+    <style>
+        .read-full {
+            margin: 50px auto;
+            max-width: 900px;
+            text-align: center;
+            padding: 20px;
+            background: #f9fbff;
+            border-radius: 12px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+        }
+        
+        .read-full h2 {
+            font-size: 24px;
+            margin-bottom: 8px;
+            color: #0b1220;
+        }
+        
+        .read-full p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 18px;
+        }
+        
+        .pdf-box {
+            width: 100%;
+            height: 480px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #ddd;
+            margin-bottom: 16px;
+        }
+        
+        .pdf-box iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .pdf-actions {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        
+        .pdf-actions a {
+            text-decoration: none;
+            font-weight: 600;
+            padding: 12px 18px;
+            border-radius: 8px;
+            transition: 0.2s;
+        }
+        
+        .btn-download {
+            background: #0b84ff;
+            color: white;
+        }
+        
+        .btn-download:hover {
+            background: #0066cc;
+        }
+        
+        .btn-read {
+            border: 1px solid #0b84ff;
+            color: #0b84ff;
+        }
+        
+        .btn-read:hover {
+            background: #e9f2ff;
+        }
+    </style>
+
+
+
+</body>
+
+</html><!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gen Z Protest in Nepal — How Youth Made the Government Kneel</title>
+    <style>
+         :root {
+            --accent: #2c3e50;
+            --muted: #6b7280;
+            --card-bg: rgba(255, 255, 255, 0.95);
+            --glass: rgba(255, 255, 255, 0.85);
+            --toast-bg: #111;
+        }
+        
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            color: #222;
+        }
+        
+        body {
+            background: url("protest8.jpg") center/cover fixed no-repeat;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .page-wrap {
+            min-height: 100%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+        }
+        
+        header {
+            width: 100%;
+            max-width: 1100px;
+            color: #fff;
+            margin-bottom: 20px;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            background: linear-gradient(90deg, rgba(44, 62, 80, 0.95), rgba(32, 48, 70, 0.95));
+            box-shadow: 0 6px 22px rgba(0, 0, 0, 0.4);
+            position: relative;
+        }
+        
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+            line-height: 1.1;
+        }
+        
+        header p {
+            margin: 6px 0 0;
+            color: #e6eef8;
+            font-size: 14px;
+        }
+        
+        #google_translate_wrapper {
+            position: fixed;
+            top: 16px;
+            right: 16px;
+            display: flex;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 6px 10px;
+            border-radius: 8px;
+            z-index: 9999;
+        }
+        
+        #google_translate_element select {
+            padding: 6px 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            background: #fff;
+            color: #333;
+            cursor: pointer;
+        }
+        
+        .author-box {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            background: var(--glass);
+            padding: 12px 14px;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 700px;
+            margin: 12px auto 20px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+        }
+        
+        .author-box img {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #fff;
+        }
+        
+        .author-meta {
+            font-size: 14px;
+            color: #111
+        }
+        
+        .author-meta strong {
+            display: block;
+            color: var(--accent);
+            font-size: 15px
+        }
+        
+        main.article {
+            width: 100%;
+            max-width: 1100px;
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: 26px;
+            box-shadow: 0 10px 30px rgba(2, 6, 23, 0.25);
+            box-sizing: border-box;
+            margin-bottom: 24px;
+        }
+        
+        h2 {
+            color: var(--accent);
+            margin-top: 22px
+        }
+        
+        p {
+            margin: 12px 0;
+            line-height: 1.6
+        }
+        
+        ul {
+            margin: 10px 0 18px 20px
+        }
+        
+        li {
+            margin-bottom: 8px
+        }
+        
+        .slideshow {
+            position: relative;
+            max-width: 100%;
+            margin: 20px 0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .slideshow img {
+            width: 100%;
+            display: block;
+        }
+        
+        .slide-controls {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: space-between;
+            padding: 0 8px;
+            pointer-events: none;
+        }
+        
+        .btn-slide {
+            pointer-events: auto;
+            background: rgba(0, 0, 0, 0.45);
+            color: #fff;
+            border: none;
+            padding: 10px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        
+        .dots {
+            display: flex;
+            gap: 6px;
+            justify-content: center;
+            margin-top: 8px
+        }
+        
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ccc;
+            cursor: pointer;
+        }
+        
+        .dot.active {
+            background: var(--accent)
+        }
+        
+        .comment-section {
+            margin-top: 26px
+        }
+        
+        .comment-card {
+            background: #f4f6f8;
+            padding: 16px;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 0, 0, 0.04);
+        }
+        
+        .comment-card h3 {
+            margin: 0 0 8px 0
+        }
+        
+        .comment-card textarea,
+        .comment-card input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #d1d5db;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        
+        .comment-actions {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-top: 8px
+        }
+        
+        .btn-primary {
+            background: var(--accent);
+            color: #fff;
+            padding: 10px 14px;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer
+        }
+        
+        .btn-secondary {
+            background: #fff;
+            border: 1px solid #cbd5e1;
+            padding: 9px 12px;
+            border-radius: 6px;
+            cursor: pointer
+        }
+        
+        .comments-list {
+            margin-top: 14px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px
+        }
+        
+        .single-comment {
+            background: white;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .single-comment .meta {
+            font-size: 12px;
+            color: var(--muted);
+            margin-bottom: 6px
+        }
+        
+        .single-comment p {
+            margin: 6px 0 0
+        }
+        
+        .toast {
+            position: fixed;
+            right: 18px;
+            bottom: 18px;
+            background: var(--toast-bg);
+            color: #fff;
+            padding: 12px 16px;
+            border-radius: 8px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+            z-index: 9999;
+            display: none;
+            font-size: 14px;
+        }
+        
+        footer {
+            width: 100%;
+            max-width: 1100px;
+            border-radius: 8px;
+            text-align: center;
+            padding: 12px;
+            background: linear-gradient(90deg, rgba(44, 62, 80, 0.96), rgba(20, 30, 48, 0.96));
+            color: #fff;
+        }
+        
+        @media (max-width:700px) {
+            header h1 {
+                font-size: 20px;
+            }
+            .author-box {
+                padding: 10px;
+            }
+            .author-box img {
+                width: 64px;
+                height: 64px;
+            }
+            .btn-slide {
+                padding: 8px 10px;
+                font-size: 16px;
+            }
+        }
+        /* Comment Section Styling */
+        
+        .comment-section {
+            max-width: 800px;
+            margin: 30px auto;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+            font-size: 18px;
+        }
+        
+        .comment-section h3 {
+            font-size: 28px;
+            margin-bottom: 18px;
+            color: #2c3e50;
+        }
+        
+        .comment-section input[type="text"],
+        .comment-section input[type="email"],
+        .comment-section textarea {
+            width: 100%;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            font-size: 18px;
+            box-sizing: border-box;
+        }
+        
+        .comment-section textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .comment-section button[type="submit"] {
+            background: #2c3e50;
+            color: #fff;
+            padding: 16px 24px;
+            font-size: 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        
+        .comment-section button[type="submit"]:hover {
+            background: #1b2a38;
+        }
+        /* Displayed Comments */
+        
+        #commentsList div {
+            border: 2px solid #2c3e50;
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 12px;
+            font-size: 18px;
+            background: #f7f9fb;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-wrap">
+
+        <header>
+            <div id="google_translate_wrapper">
+                <label for="google_translate_element" style="margin-right:8px; font-weight:600; color:#fff;">भाषा छान्नुहोस्:</label>
+                <div id="google_translate_element"></div>
+            </div>
+
+            <h1>Gen Z Protest in Nepal: How Youth Made the Government Kneel within 48 Hours</h1>
+            <p>A first-hand narrative and analysis of the Gen Z movement that shook Nepal on 23rd–24th Bhadra</p>
+        </header>
+
+        <div class="author-box">
+            <img src="My photo.jpg" alt="Author Utsab Gautam">
+            <div class="author-meta">
+                <strong>Utsab Gautam</strong> Sisne-06, Rukum (East)<br> Eyewitness & Author
+            </div>
+        </div>
+
+        <main class="article">
+
+            <h2>Who are Gen Z?</h2>
+            <p>In the context of Nepal, Generation Z refers to young people born between 1997 AD and 2012 AD who grew up during the country’s political transition and rapid digital expansion. As the first digital-native generation in Nepal, they are highly
+                active on social media and increasingly vocal in raising their voices against corruption, unemployment, and weak governance through online campaigns and street protests.</p>
+
+            <!-- Background -->
+            <h2>Background and Causes of the Gen Z Protest</h2>
+            <p>Political change in Nepal was necessary, but over the last decade, the post of prime minister has become a musical chair among three powerful leaders K.P. Oli, Sher Bahadur Deuba, and Pushpa Kamal Dahal. This political instability was largely
+                a result of Nepal’s electoral system. The system is structured in such a way that entrenched political elites, and corrupt individuals often remain protected, making meaningful reform difficult.</p>
+
+            <p>The Gen Z protest is not simply an outburst of anger over the recent social media ban. That issue acted only as a spark of fire. The real “fuel” for the protest had been accumulating for years under successive governments. Corruption has penetrated
+                every level of governance from local ward offices to the prime minister’s chair. Nepali citizens, especially the youth, see little accountability and no hope of change under the existing leadership.</p>
+
+            <p>Another factor fueling resentment is the luxury lifestyle of politicians’ children. Many of today’s leaders once came to Kathmandu barefoot during their youth, yet now their families live lavishly while ordinary Nepalis struggle with unemployment,
+                inflation, and poverty. These raises pressing questions: How did these leaders acquire such wealth? How do their children afford a lifestyle far beyond the means of ordinary citizens? These concerns are especially powerful for Gen Z, who
+                feel cheated as they see leader's families enjoy luxuries funded by taxpayers who workday and night.</p>
+
+            <p>At its core, the Gen Z protest is a response to systemic corruption, nepotism, and the concentration of power among three dominant leaders. The frustration is not limited to a single event; rather, it reflects years of betrayal, inequality,
+                and lack of accountability.</p>
+
+            <h2><strong>Key Events and Demands of the Gen Z Protest in Nepal:</strong></h2>
+            <p>The Gen Z protest in Nepal was not organized merely to showcase power against the government. Rather, it was driven by specific demands that the youth wanted the authorities to address. When peaceful appeals are ignored, protest becomes the
+                only tool to push for change and this generation chooses that path out of necessity, not aggression.</p>
+
+            <p>Protesters mobilized through social media platforms, gathering in public spaces such as Maitighar Mandala, Koteshwor, and Tinkune. They carried placards, chanted slogans, and live-streamed the events online, ensuring that their voices were
+                amplified both on the streets and across digital platforms. The demonstrations remained largely peaceful, but the sheer energy, determination, and numbers of participants revealed the depth of frustration among Nepal’s youth. Importantly,
+                these rallies brought together students, young professionals, and ordinary citizens across political divides proving that this was not a partisan struggle but a generational demand for genuine reform.</p>
+
+            <p>The key demands of the Gen Z protesters included:</p>
+            <ul>
+                <li><strong>End to Corruption and Nepotism:</strong> A demand for transparency in governance and accountability from political leaders at all levels.</li>
+                <li><strong>Political Reform:</strong> An end to the “musical chair” politics dominated by the same three leaders for decades.</li>
+                <li><strong>Freedom of Expression:</strong> Rejection of the proposed social media restrictions and protection of online rights as part of democratic freedoms.</li>
+                <li><strong>Economic Opportunities:</strong> Stronger employment policies, encouragement of entrepreneurship, and measures to curb the mass migration of youth seeking work abroad.</li>
+                <li><strong>Equality and Justice:</strong> Reduction of social inequalities, fair distribution of resources, and improvements in public services such as education, healthcare, and infrastructure.</li>
+            </ul>
+
+            <!-- slideshow gallery -->
+            <h2>Photo Gallery of the Protest</h2>
+            <h2>Photo Gallery</h2>
+            <div class="slideshow" aria-label="Protest slideshow">
+                <div class="slideshow" aria-label="Protest images slideshow">
+                    <img class="slides" src="protest2.jpg" alt="Protest image 2 — Singadurbar after protest ">
+                    <img class="slides" src="protest3.jpg" alt="Protest image 3 — people at parliament when it was burning">
+                    <img class="slides" src="protest4.jpg" alt="Protest image 4 — Brave person in the protest">
+                    <img class="slides" src="protest5.jpg" alt="Protest image 5 — Burning Central office of Nepal communist party (Maoist)">
+                    <img class="slides" src="protest6.jpg" alt="Protest image 6 —Burning Central office of Nepal communist party (UML)">
+                    <img class="slides" src="protest 8.jpg" alt="Protest image 8 — People at protest ">
+                    <img class="slides" src="protest7.jpg" alt="Protest image 8 — Burning image of central officer of Nepali Congress ">
+                    <img class="slides" src="protest9.jpg" alt="Protest image 9 — Condition of corrupted Sher Bahadur deuba and Arju deuba rana ">
+
+                    <div class="slide-controls">
+                        <button class="btn-slide" id="prevBtn">&#10094;</button>
+                        <button class="btn-slide" id="nextBtn">&#10095;</button>
+                    </div>
+                </div>
+
+                <!-- controls -->
+                <div class="slide-controls" aria-hidden="true">
+                    <button class="btn-slide" id="prevBtn" title="Previous slide" aria-label="Previous slide">&#10094;</button>
+                    <button class="btn-slide" id="nextBtn" title="Next slide" aria-label="Next slide">&#10095;</button>
+                </div>
+            </div>
+            <div class="dots" id="dots" role="tablist" aria-label="Slide indicators"></div>
+
+            <!-- long eyewitness text on 23rd / 24th bhadra -->
+            <h2>The Protests of 23rd and 24th Bhadra: A Turning Point</h2>
+
+            <p>The demonstrations on 23rd and 24th Bhadra marked a decisive moment in the Gen Z protest movement. What had begun as scattered gatherings and online campaigns quickly transformed into mass mobilization across Kathmandu. On these two days,
+                the frustration of Nepal’s youth was fully visible on the streets.</p>
+
+            <p>I personally witnessed the protests at locations such as Maitighar Mandala, Koteshwor, and Tinkune, where thousands of young people carried placards, shouted slogans, and broadcast live on social media. The energy of the crowds was unmistakable
+                — peaceful yet determined. It was clear that this was not a symbolic march but a serious demand for accountability and reform.</p>
+
+            <p><strong>On 23rd Bhadra,</strong> I witnessed a significant Gen Z protest in Kathmandu along the route from Maitighar to New Baneshwor. I arrived at Maitighar at 11:00 AM, where a mix of protesters had already gathered, including groups advocating
+                issues such as sugarcane farmers’ rights. The Gen Z protesters ranged from +2 students to master’s graduates, with some students in school uniforms, led in a disciplined manner by their school leaders. While not all schools and colleges
+                participated, several had sent students to join the movement.</p>
+
+            <p>The crowd began marching toward Baneshwor, and I joined them. This was my first ever protest, and many others were in the same situation. The atmosphere was peaceful yet energetic. Protesters carried posters, banners, and pamphlets, with slogans
+                and messages criticizing corruption and demanding reform. Motorcycles patrolled the march, their loud silencers echoing like a warning to the government. Influencers, volunteers, and social workers were also present, helping participants
+                and ensuring the protest remained organized.</p>
+
+            <p>However, as we approached Baneshwor, the situation began to escalate. Some protesters attempted to approach Parliament, while the police tried to control the crowd using tear gas, water cannons, and warning shots. Despite these measures, the
+                protesters’ anger and determination were evident. Observing the rising tension, I advised my companions to move to a safer area near Everest Hospital. From there, we could see and hear the chaotic scene: bullets fired into the air, people
+                running to protect themselves, and ambulances arriving to rescue the injured. Many of the wounded were students, highlighting the youth-driven nature of the protest. Witnessing this, I questioned how law enforcement could justify such
+                force against peaceful young citizens.</p>
+
+            <p>By late afternoon, around 2:30–4:00 PM, I left the protest and returned home. Social media later revealed reports of injuries and casualties, mostly among youth who had come to demand positive change for Nepal. While the exact number of deaths
+                on that day was under ten, the impact on participants and observers was profound. Many protesters remained in the area into the night, determined not to let fear silence them, and I found it difficult to sleep, haunted by the scenes I
+                had witnessed.</p>
+
+            <p>This day was a turning point, showing that Nepal’s youth are willing to stand up for their rights, demand systemic change, and challenge entrenched political elites. It was clear that this protest was not merely a demonstration of power but
+                a serious call for accountability, transparency, and reform in Nepal.</p>
+
+            <p><strong>On 24th Bhadra,</strong> the situation was completely different. While the protest on 23rd Bhadra had largely remained peaceful, the actions of the government perceived as dictatorial and dismissive toward its citizens ignited widespread
+                anger. It was as if the government had provoked a sleeping lion; the frustration and sense of injustice among the protesters and ordinary citizens erupted with force.</p>
+
+            <p>On this day, the protests were no longer limited to students or Gen Z. Citizens from across Kathmandu Valley joined the movement, and crowds surrounded the homes of politicians, ministers, and individuals linked to political parties, as well
+                as offices of central, provincial, and local political institutions. This massive mobilization occurred not only in Kathmandu but also in surrounding areas.</p>
+
+            <p>In many locations, protesters targeted corrupt individuals’ properties. Houses of politicians and government officials were set on fire, and some police stations were attacked. Reports indicate large amounts of cash and luxury items were discovered
+                and destroyed during these events. However, alongside acts of targeting corrupt wealth, external actors exploited the unrest to damage public property and private businesses that employ thousands. Important government buildings and marketplaces
+                were harmed — causing deep consequences for ordinary citizens and workers.</p>
+
+            <p>The situation prompted the deployment of the Nepal Army around 10 PM. Although delayed, the army’s intervention helped restore order and protect civilians. By that time, weapons had been captured by external actors and prisoners escaped from
+                jails in some areas. Once the army regained control, the streets became safer and the public felt relief.</p>
+
+            <p style="color:#4c05ff">Singha Durbar and other historical government buildings were damaged, but the loss of human life was far more significant. Dozens of citizens were injured or killed in these events — young people who had come to demand change. While government
+                buildings can be rebuilt, lives lost cannot. These two days left the entire country in grief and reflection, highlighting both the passion for justice and the dangers of uncontrolled violence during mass movements.</p>
+            <p> Together, the events of 23rd and 24th Bhadra demonstrated both the passion and determination of Nepal’s youth and the challenges of channeling mass protests in a way that enforces accountability while protecting innocent lives and public property.
+                For Gen Z, these days were not just protests, they were a statement that the younger generation will no longer remain silent in the face of corruption, political stagnation, and social injustice.</p>
+
+            <h2>Party First, Nation Forgotten</h2>
+            <p>Nepal today is in deep crisis. From economic struggles to corruption, unemployment to youth migration, every sector is suffering. Prices of basic goods are rising, industries are collapsing, students are living in thousands, hospitals lack
+                proper care, farmers are ignored, and corruption has become normal in government offices. Instead of solving these problems, our politicians and their party members are busy in something else building their parties, not building the nation.</p>
+            <p>The recent incidents of 23rd and 24th Bhadra proved this reality once again. When thousands of youths came to the streets, raising their voices against corruption, unemployment, and the negligence of leaders, what did the politicians do? They
+                remained silent. Not a single meaningful word came from party members or leaders. Instead of listening to the pain of the people, they were busy protecting their chairs, their posts, and their parties.</p>
+            <p>From local party workers to ministers in power, everyone is more concerned about defending corruption and pleasing their leaders. They do not accept mistakes, they do not learn from failure, and they continue to close their eyes to the nation’s
+                suffering. Their voices are loud only inside party meetings, but completely silent when the streets are filled with young citizens demanding change.</p>
+            <p>What is even more painful is that they misuse the names of great leaders like B.P. Koirala and Madan Bhandari. These two visionaries had clear ideologies and worked for the people, but today’s politicians only use their names during elections
+                to collect votes. Their principles of justice, socialism, democracy, and equality are forgotten. In reality, no one is following ideology they are only hungry for power.</p>
+            <p>This hunger for power has blinded them. While the country is facing unemployment, poverty, corruption, poor education, weak health system, lack of industries, and a mass brain-drain of youth, our leaders are fighting only for positions. </p>
+            <p> From the grassroots to the central level, the story is the same. Party members follow the same culture of defending wrong instead of standing for the right. They do not question corruption inside their own party. They do not speak against
+                injustice. For them, protecting the party is more important than protecting Nepal.</p>
+            <p>This culture must end. If we really want to save the country, we must bring change from the grassroots level. Parties cannot be bigger than the nation. Leaders and members must learn to admit mistakes, follow ideology, and put the people first.
+                Otherwise, history will remember today’s politicians not as nation-builders, but as the very people who betrayed Nepal in its time of greatest need. </p>
+            <p>The Gen Z protests of 23rd and 24th Bhadra are proof that young Nepalis will not remain silent forever. The youth are already questioning this broken system. If politicians do not change, the new generation will force change. It is time to
+                stop building only party offices and start building the nation of Nepal.</p>
+            <h2>Way Forward: Building a Nation Beyond Parties</h2>
+            <p>The protests have shown that Nepal cannot continue the same path. Real reforms are required in governance, anti-corruption, economic policy, education, and health. The youth must be included in policy decisions and leaders must prioritize
+                national interest above party competition.</p>
+
+            <ul>
+                <li><strong>Good Governance and Rule of Law:</strong> Immediate, transparent investigations into corruption; implement laws fairly.</li>
+                <li><strong>Ending Corruption from Ground Level:</strong> Digital governance, transparent spending, citizen monitoring.</li>
+                <li><strong>Economic Reform and Job Creation:</strong> Support local industries, entrepreneurship, and job creation to reduce brain drain.</li>
+                <li><strong>Education and Health:</strong> Reform public services to be accessible and high-quality.</li>
+                <li><strong>Youth Inclusion:</strong> Youth voices must be part of decision-making at all levels.</li>
+                <li><strong>Transparency and Accountability:</strong> Open budgets and regular public reporting.</li>
+                <li><strong>National Unity:</strong> Parties must put national interest above their own competition.</li>
+                <li><strong>Directly Elected Prime Minister:</strong> Consider electoral reform to strengthen accountability of the executive to voters.</li>
+            </ul>
+
+            <h2>Conclusion: A call for real change</h2>
+            <p>The incidents of 23rd and 24th Bhadra sent a clear message: the youth will not remain silent. At a time when politicians hid behind party walls, the Nepali Army stepped in to restore order and deserves thanks for protecting citizens. We congratulate
+                interim leaders entrusted with stewardship and ask them to act strictly in lines to address corruption, listen to Gen Z, investigate misuse of public funds, and ensure the sacrifices of citizens are not wasted.</p>
+            <p style="color:#c62828">"All the data and information are taken from internet research and different websites. So there may be some error. If there are any errors or misinformation I apologize for my mistake."</p>
+
+            <p style="text-align:center;color:#08c06b;font-weight:600">
+                <h1>Thank you!!</h1>
+            </p>
+
+
+            <div class="dots" id="dots"></div>
+
+        </main>
+        <footer>&copy; 2025 Gen Z Protest Coverage | All rights reserved</footer>
+    </div>
+    <div class="toast" id="toast"></div>
+
+    <script>
+        // Google Translate
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,ne',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+        (function() {
+            var s = document.createElement('script');
+            s.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+            document.head.appendChild(s);
+        })();
+
+        // Slideshow
+        (function() {
+            const slides = Array.from(document.querySelectorAll('.slides'));
+            const dotsContainer = document.getElementById('dots');
+            let index = 0;
+            slides.forEach((_, i) => {
+                const dot = document.createElement('span');
+                dot.className = 'dot';
+                dot.dataset.i = i;
+                dot.addEventListener('click', () => showSlide(i));
+                dotsContainer.appendChild(dot);
+            });
+
+            function showSlide(i) {
+                slides.forEach(s => s.style.display = 'none');
+                const dots = dotsContainer.querySelectorAll('.dot');
+                dots.forEach(d => d.classList.remove('active'));
+                index = (i + slides.length) % slides.length;
+                slides[index].style.display = 'block';
+                dots[index].classList.add('active');
+            }
+
+            function nextSlide() {
+                showSlide(index + 1)
+            }
+
+            function prevSlide() {
+                showSlide(index - 1)
+            }
+            document.getElementById('nextBtn').addEventListener('click', () => nextSlide());
+            document.getElementById('prevBtn').addEventListener('click', () => prevSlide());
+            showSlide(0);
+            setInterval(nextSlide, 4000);
+        })();
+
+        // Comments
+        (function() {
+            const postBtn = document.getElementById('postBtn');
+            const clearBtn = document.getElementById('clearBtn');
+            const commentInput = document.getElementById('commentInput');
+            const emailInput = document.getElementById('emailInput');
+            const commentsList = document.getElementById('commentsList');
+            const toastEl = document.getElementById('toast');
+
+            function showToast(msg, time = 3000) {
+                toastEl.textContent = msg;
+                toastEl.style.display = 'block';
+                setTimeout(() => toastEl.style.display = 'none', time);
+            }
+
+            function nowString() {
+                return new Date().toLocaleString();
+            }
+
+            function loadComments() {
+                const raw = localStorage.getItem('genz_comments_v1');
+                if (!raw) return [{
+                    text: "Amazing coverage, thanks!",
+                    email: "example1@gmail.com",
+                    date: nowString()
+                }, {
+                    text: "Youth are the real change-makers.",
+                    email: "example2@gmail.com",
+                    date: nowString()
+                }];
+                try {
+                    return JSON.parse(raw);
+                } catch (e) {
+                    return [];
+                }
+            }
+
+            function saveComments(arr) {
+                localStorage.setItem('genz_comments_v1', JSON.stringify(arr));
+            }
+
+            function renderComments() {
+                const arr = loadComments();
+                commentsList.innerHTML = '';
+                if (arr.length === 0) {
+                    commentsList.innerHTML = '<div style="color:var(--muted);padding:8px">No comments yet.</div>';
+                    return;
+                }
+                arr.slice().reverse().forEach(c => {
+                    const node = document.createElement('div');
+                    node.className = 'single-comment';
+                    node.innerHTML = `<div class="meta">${c.date}${c.email?(' • '+c.email):''}</div><p>${c.text}</p>`;
+                    commentsList.appendChild(node);
+                });
+            }
+            postBtn.addEventListener('click', () => {
+                const text = commentInput.value.trim();
+                const email = emailInput.value.trim();
+                if (!text) {
+                    showToast('Write a comment first.');
+                    return;
+                }
+                const arr = loadComments();
+                arr.push({
+                    text,
+                    email: email || null,
+                    date: nowString()
+                });
+                saveComments(arr);
+                renderComments();
+                commentInput.value = '';
+                emailInput.value = '';
+                showToast('Comment saved locally.');
+            });
+            clearBtn.addEventListener('click', () => {
+                commentInput.value = '';
+                emailInput.value = '';
+            });
+            commentInput.addEventListener('keydown', (e) => {
+                if (e.ctrlKey && e.key === 'Enter') postBtn.click();
+            });
+            renderComments();
+        })();
+    </script>
+    <!-- Comment Section -->
+    <section class="comment-section">
+        <h3>Leave a Comment</h3>
+        <form id="commentForm">
+            <input type="text" name="from_name" placeholder="Your Name" required>
+            <input type="email" name="from_email" placeholder="Your Email" required>
+            <textarea name="comment" placeholder="Write your comment" required></textarea>
+            <button type="submit">Post Comment</button>
+        </form>
+        <div id="commentsList"></div>
+    </section>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        // Initialize EmailJS
+        emailjs.init("NqbCbL42heq6ParWJ"); // your public key
+
+        const commentForm = document.getElementById('commentForm');
+        const commentsList = document.getElementById('commentsList');
+
+        function nowString() {
+            return new Date().toLocaleString();
+        }
+
+        function loadComments() {
+            return JSON.parse(localStorage.getItem('genz_comments_v1') || "[]");
+        }
+
+        function saveComments(arr) {
+            localStorage.setItem('genz_comments_v1', JSON.stringify(arr));
+        }
+
+        function renderComments() {
+            const arr = loadComments();
+            commentsList.innerHTML = '';
+            arr.slice().reverse().forEach(c => {
+                const div = document.createElement('div');
+                div.className = 'single-comment';
+                div.innerHTML = `<div class="meta">${c.date}${c.email ? (' • '+c.email) : ''}</div><p>${c.text}</p>`;
+                commentsList.appendChild(div);
+            });
+        }
+
+        commentForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = commentForm.from_name.value.trim();
+            const email = commentForm.from_email.value.trim();
+            const text = commentForm.comment.value.trim();
+
+            if (!text) return alert('Write a comment first.');
+
+            // Save locally
+            const arr = loadComments();
+            arr.push({
+                text,
+                email,
+                date: nowString()
+            });
+            saveComments(arr);
+            renderComments();
+
+            // Send via EmailJS
+            emailjs.sendForm("gen Z protest", "template_cpysxrm", this)
+                .then(() => alert('✅ Comment sent via EmailJS!'))
+                .catch(err => {
+                    alert('❌ Failed to send comment via EmailJS');
+                    console.error(err);
+                });
+
+            commentForm.reset();
+        });
+    </script>
+    <!-- ====== Read Full Article Section ====== -->
+    <section class="read-full">
+        <h2>📖 Read the Full Article</h2>
+        <p>You can preview the article below or click the button to download the complete PDF.</p>
+
+        <div class="pdf-box">
+            <iframe src="Gen Z Protest .pdf" title="Gen-Z PDF Preview"></iframe>
+        </div>
+
+        <div class="pdf-actions">
+            <a href="Gen Z Protest .pdf" download="gen-z.pdf" class="btn-download">⬇ Download Full PDF</a>
+            <a href="Gen Z Protest .pdf" target="_blank" class="btn-read">🔎 Open in New Tab</a>
+        </div>
+    </section>
+
+    <style>
+        .read-full {
+            margin: 50px auto;
+            max-width: 900px;
+            text-align: center;
+            padding: 20px;
+            background: #f9fbff;
+            border-radius: 12px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+        }
+        
+        .read-full h2 {
+            font-size: 24px;
+            margin-bottom: 8px;
+            color: #0b1220;
+        }
+        
+        .read-full p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 18px;
+        }
+        
+        .pdf-box {
+            width: 100%;
+            height: 480px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #ddd;
+            margin-bottom: 16px;
+        }
+        
+        .pdf-box iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .pdf-actions {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        
+        .pdf-actions a {
+            text-decoration: none;
+            font-weight: 600;
+            padding: 12px 18px;
+            border-radius: 8px;
+            transition: 0.2s;
+        }
+        
+        .btn-download {
+            background: #0b84ff;
+            color: white;
+        }
+        
+        .btn-download:hover {
+            background: #0066cc;
+        }
+        
+        .btn-read {
+            border: 1px solid #0b84ff;
+            color: #0b84ff;
+        }
+        
+        .btn-read:hover {
+            background: #e9f2ff;
+        }
+    </style>
+
+
+
+</body>
+
 </html>
